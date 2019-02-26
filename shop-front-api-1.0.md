@@ -122,7 +122,7 @@
             "specification": "8GB+128GB",
             "colour": 1,
             "thumbsUp": 8,
-            "thumbsDown": 1,
+            "thumbsDown": 2,
             "products": {
                 "id": 1,
                 "categoryId": 3,
@@ -152,7 +152,27 @@
                 "brands": {
                     "name": "小米",
                     "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
-                }
+                },
+                "categoryses": [
+                    {
+                        "id": 1,
+                        "parentId": 0,
+                        "title": "麦克风",
+                        "leaf": 0
+                    },
+                    {
+                        "id": 2,
+                        "parentId": 1,
+                        "title": "无线麦克风",
+                        "leaf": 0
+                    },
+                    {
+                        "id": 3,
+                        "parentId": 2,
+                        "title": "BLUE无线麦克风",
+                        "leaf": 1
+                    }
+                ]
             },
             "accessories": [
                 {
@@ -199,11 +219,6 @@
                     "colour": 3
                 }
             ],
-            "categories": [
-                "麦克风",
-                "无线麦克风",
-                "BLUE无线麦克风"
-            ],
             "availableSpecifications": [
                 "6GB+64GB",
                 "8GB+128GB"
@@ -247,8 +262,6 @@
      +  id 子产品id
      +  thumbsUp 当请求为<点赞>添加子产品的点赞数
      +  thumbsDown 当请求为<踩>添加此子产品的踩数
-+ Description 
-    +  [MUST] Authenticated
 + Response 200 (Application/json)
     
 ### 子产品收藏(客户端) [POST] /collects
