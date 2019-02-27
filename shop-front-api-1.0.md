@@ -258,14 +258,14 @@
         }
       }
 
-### 子产品赞踩(客户端) [GET] /subProducts/thumbs/{id}?thumbsUp=1
+### 产品赞踩 [GET] /subProducts/thumbs/{id}?thumbsUp=1
 + Parameters
      +  id 子产品id
      +  thumbsUp 当请求为<点赞>添加子产品的点赞数
      +  thumbsDown 当请求为<踩>添加此子产品的踩数
 + Response 200 (Application/json)
     
-### 子产品收藏(客户端) [POST] /collects
+### 产品收藏 [POST] /collects
 + Parameters
      +  mainProductId 主产品id
 + Description 
