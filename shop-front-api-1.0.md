@@ -105,7 +105,9 @@
 + Parameters
      +  id 子产品id
 + Description 
+     + mainProductId 主产品id 
      + products 主产品 
+     + pictures 子产品图片
      + specifications 主产品下所有规格
      + colours 主产品下所有的颜色 
      + brands 品牌
@@ -114,18 +116,55 @@
      + categories 子产品所属分类
      + availableSpecifications 当前子产品<颜色>下有的规格数据
      + availableColours 当前子产品<规格> 下有的颜色数据
+     + shopUrl 购买链接
  
 + Response 200 (Application/json)
 
       {
         "data": {
             "mainProductId": 1,
-            "specification": "8GB+128GB",
+            "specification": "6GB+64GB",
             "colour": 1,
-            "thumbsUp": 8,
-            "thumbsDown": 2,
+            "thumbsUp": 11,
+            "thumbsDown": 4,
+            "pictures": [
+                {
+                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
+                    "title": "TestPicTURE2",
+                    "orderNo": 0
+                },
+                {
+                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990604.jpg",
+                    "title": "TestPicTURE",
+                    "orderNo": 0
+                },
+                {
+                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990602.jpg",
+                    "title": "TestPicTURE",
+                    "orderNo": 0
+                },
+                {
+                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990603.jpg",
+                    "title": "TestPicTURE2",
+                    "orderNo": 0
+                },
+                {
+                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990605.jpg",
+                    "title": "TestPicTURE",
+                    "orderNo": 0
+                },
+                {
+                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
+                    "title": "TestPicTURE",
+                    "orderNo": 0
+                }
+            ],
+            "shopUrl": "https://item.jd.com/1234567890",
             "products": {
                 "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
                 "categoryId": 3,
                 "title": "小米8",
                 "briefDescription": "【品质特惠】骁龙845处理器，成交价2399！红外人脸解锁，AI变焦双摄，AI语音助手！推荐购买白色",
@@ -133,6 +172,7 @@
                 "brandId": 1,
                 "specifications": [
                     "6GB+64GB",
+                    "x86",
                     "8GB+222GB",
                     "8GB+128GB"
                 ],
@@ -191,6 +231,22 @@
                     "description": "小米8展示音频",
                     "filesize": 0,
                     "duration": 0
+                },
+                {
+                    "type": 1,
+                    "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
+                    "title": "视频",
+                    "description": "视频",
+                    "filesize": 0,
+                    "duration": 11
+                },
+                {
+                    "type": 3,
+                    "title": "相关视频",
+                    "content": "<iframe frameborder=\"0\" src=\"https://v.qq.com/txp/iframe/player.html?vid=m0508lpjej4\" allowFullScreen=\"true\"></iframe>",
+                    "description": "相关视",
+                    "filesize": 0,
+                    "duration": 0
                 }
             ],
             "subProductsList": [
@@ -218,15 +274,31 @@
                     "id": 5,
                     "specification": "8GB+222GB",
                     "colour": 3
+                },
+                {
+                    "id": 12,
+                    "specification": "x86",
+                    "colour": 1
+                },
+                {
+                    "id": 13,
+                    "specification": "x86",
+                    "colour": 1
+                },
+                {
+                    "id": 15,
+                    "specification": "x86",
+                    "colour": 1
                 }
             ],
             "availableSpecifications": [
                 "6GB+64GB",
+                "x86",
                 "8GB+128GB"
             ],
             "availableColours": [
                 1,
-                3
+                2
             ]
         }
       }
@@ -236,36 +308,63 @@
      +  id 子产品id
 + Description 
     +  [MUST] Authenticated
-    + [MUST] ROLE_ADMIN
+    + subProductId 子产品ID
+    + tbProductId 淘宝表ID
+    + tbItemId 实际淘宝id
+    + reservePrice 子产品淘宝价格
+    + subCurrency 币别名称
+    + sourceName 来源名称
+    + sourceLogo 来源logo
 + Response 200 (Application/json)
 
        {
-        "data": {
-            "id": 2,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-02-22 10:19:27",
-            "modified": "2019-02-22 10:19:27",
-            "subProductId": 2,
-            "tbProductId": 2,
-            "tbItemId": 10002,
-            "source": "224",
-            "currency": 1,
-            "isInland": 1,
-            "reservePrice": "224",
-            "shopUrl": "https://item.jd.com/4586925.html#crumb-wrap",
-            "subCurrency": "¥"
-        }
+        "data": [
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-22 10:19:27",
+                "modified": "2019-02-22 10:19:27",
+                "subProductId": 3,
+                "tbProductId": 3,
+                "tbItemId": 10003,
+                "source": 1,
+                "currency": 1,
+                "isInland": 1,
+                "isManual": 0,
+                "reservePrice": "325",
+                "subCurrency": "¥",
+                "sourceName": "淘宝",
+                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            {
+                "id": 5,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "subProductId": 3,
+                "tbProductId": 123,
+                "tbItemId": 11111,
+                "source": 13,
+                "currency": 2,
+                "isInland": 0,
+                "isManual": 0,
+                "subCurrency": "$",
+                "sourceName": "亚马逊",
+                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            }
+        ]
       }
 
-### 产品赞踩 [GET] /subProducts/thumbs/{id}?thumbsUp=1
+### 子产品赞踩(客户端) [GET] /subProducts/thumbs/{id}?thumbsUp=1
 + Parameters
      +  id 子产品id
      +  thumbsUp 当请求为<点赞>添加子产品的点赞数
      +  thumbsDown 当请求为<踩>添加此子产品的踩数
 + Response 200 (Application/json)
     
-### 产品收藏 [POST] /collects
+### 子产品收藏(客户端) [POST] /collects
 + Parameters
      +  mainProductId 主产品id
 + Description 
