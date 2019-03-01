@@ -252,6 +252,14 @@
                 "description": "相关视频",
                 "filesize": 0,
                 "duration": 0
+            },
+            {
+                "type": 3,  //3相关视频
+                "title": "相关视频2",
+                "content": "m0508lpjej4",
+                "description": "相关视频2",
+                "filesize": 0,
+                "duration": 0
             }
         ],
         "subProductsList": [
