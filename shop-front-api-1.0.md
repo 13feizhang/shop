@@ -122,186 +122,191 @@
 
       {
         "data": {
-            "mainProductId": 1,
-            "specification": "6GB+64GB",
-            "colour": 1,
-            "thumbsUp": 11,
-            "thumbsDown": 4,
-            "pictures": [
-                {
-                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
-                    "title": "TestPicTURE2",
-                    "orderNo": 0
-                },
-                {
-                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990604.jpg",
-                    "title": "TestPicTURE",
-                    "orderNo": 0
-                },
-                {
-                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990602.jpg",
-                    "title": "TestPicTURE",
-                    "orderNo": 0
-                },
-                {
-                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990603.jpg",
-                    "title": "TestPicTURE2",
-                    "orderNo": 0
-                },
-                {
-                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990605.jpg",
-                    "title": "TestPicTURE",
-                    "orderNo": 0
-                },
-                {
-                    "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
-                    "title": "TestPicTURE",
-                    "orderNo": 0
-                }
-            ],
-            "shopUrl": "https://item.jd.com/1234567890",
-            "products": {
-                "id": 1,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "categoryId": 3,
-                "title": "小米8",
-                "briefDescription": "【品质特惠】骁龙845处理器，成交价2399！红外人脸解锁，AI变焦双摄，AI语音助手！推荐购买白色",
-                "description": "小米公司最新款手机",
-                "brandId": 1,
-                "specifications": [
-                    "6GB+64GB",
-                    "x86",
-                    "8GB+222GB",
-                    "8GB+128GB"
-                ],
-                "colours": [
-                    {
-                        "id": 1,
-                        "colourName": "红色"
-                    },
-                    {
-                        "id": 3,
-                        "colourName": "蓝色"
-                    },
-                    {
-                        "id": 2,
-                        "colourName": "黑色"
-                    }
-                ],
-                "brands": {
-                    "name": "小米",
-                    "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
-                },
-                "categoryses": [
-                    {
-                        "id": 1,
-                        "parentId": 0,
-                        "title": "麦克风",
-                        "leaf": 0
-                    },
-                    {
-                        "id": 2,
-                        "parentId": 1,
-                        "title": "无线麦克风",
-                        "leaf": 0
-                    },
-                    {
-                        "id": 3,
-                        "parentId": 2,
-                        "title": "BLUE无线麦克风",
-                        "leaf": 1
-                    }
-                ]
+        "id": 1,     //子产品的ID  
+        "mainProductId": 1,
+        "specification": "6GB+64GB",
+        "colour": 1,
+        "thumbsUp": 14,
+        "thumbsDown": 5,
+        "pictures": [
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE2",
+                "orderNo": 0
             },
-            "accessories": [
-                {
-                    "type": 0,
-                    "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
-                    "title": "小米8展示视频",
-                    "description": "小米8展示视频",
-                    "filesize": 0,
-                    "duration": 0
-                },
-                {
-                    "type": 1,
-                    "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
-                    "title": "小米8展示音频",
-                    "description": "小米8展示音频",
-                    "filesize": 0,
-                    "duration": 0
-                },
-                {
-                    "type": 1,
-                    "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
-                    "title": "视频",
-                    "description": "视频",
-                    "filesize": 0,
-                    "duration": 11
-                },
-                {
-                    "type": 3,
-                    "title": "相关视频",
-                    "content": "<iframe frameborder=\"0\" src=\"https://v.qq.com/txp/iframe/player.html?vid=m0508lpjej4\" allowFullScreen=\"true\"></iframe>",
-                    "description": "相关视",
-                    "filesize": 0,
-                    "duration": 0
-                }
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990604.jpg",
+                "title": "TestPicTURE",
+                "orderNo": 0
+            },
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990602.jpg",
+                "title": "TestPicTURE",
+                "orderNo": 0
+            },
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990603.jpg",
+                "title": "TestPicTURE2",
+                "orderNo": 0
+            },
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990605.jpg",
+                "title": "TestPicTURE",
+                "orderNo": 0
+            },
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE",
+                "orderNo": 0
+            }
+        ],
+        "shopUrl": "https://item.jd.com/1234567890",
+        "products": {    //这个下面全部都是主产品的信息
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-01 11:14:48",
+            "modified": "2019-03-01 11:15:20",
+            "categoryId": 3,
+            "title": "小米8",
+            "briefDescription": "【品质特惠】骁龙845处理器，成交价2399！红外人脸解锁，AI变焦双摄，AI语音助手！推荐购买白色",
+            "description": "小米公司最新款手机",
+            "brandId": 1,
+            "specifications": [
+                "6GB+64GB",
+                "x86",
+                "8GB+222GB",
+                "8GB+128GB"
             ],
-            "subProductsList": [
+            "colours": [
                 {
                     "id": 1,
-                    "specification": "6GB+64GB",
-                    "colour": 1
+                    "colourName": "红色",
+                    "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
                 },
                 {
                     "id": 2,
-                    "specification": "8GB+128GB",
-                    "colour": 1
+                    "colourName": "黑色",
+                    "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
                 },
                 {
                     "id": 3,
-                    "specification": "6GB+64GB",
-                    "colour": 2
-                },
-                {
-                    "id": 4,
-                    "specification": "8GB+128GB",
-                    "colour": 3
-                },
-                {
-                    "id": 5,
-                    "specification": "8GB+222GB",
-                    "colour": 3
-                },
-                {
-                    "id": 12,
-                    "specification": "x86",
-                    "colour": 1
-                },
-                {
-                    "id": 13,
-                    "specification": "x86",
-                    "colour": 1
-                },
-                {
-                    "id": 15,
-                    "specification": "x86",
-                    "colour": 1
+                    "colourName": "蓝色",
+                    "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
                 }
             ],
-            "availableSpecifications": [
-                "6GB+64GB",
-                "x86",
-                "8GB+128GB"
-            ],
-            "availableColours": [
-                1,
-                2
+            "brands": {
+                "name": "小米",
+                "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            "categoryses": [
+                {
+                    "id": 1,
+                    "parentId": 0,
+                    "title": "麦克风",
+                    "leaf": 0
+                },
+                {
+                    "id": 2,
+                    "parentId": 1,
+                    "title": "无线麦克风",
+                    "leaf": 0
+                },
+                {
+                    "id": 3,
+                    "parentId": 2,
+                    "title": "BLUE无线麦克风",
+                    "leaf": 1
+                }
             ]
+        },
+        "accessories": [
+            {
+                "type": 0,
+                "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
+                "title": "小米8展示视频",
+                "description": "小米8展示视频",
+                "filesize": 0,
+                "duration": 0
+            },
+            {
+                "type": 1,
+                "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
+                "title": "小米8展示音频",
+                "description": "小米8展示音频",
+                "filesize": 0,
+                "duration": 0
+            },
+            {
+                "type": 1,
+                "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
+                "title": "音频",
+                "description": "音频",
+                "filesize": 0,
+                "duration": 11
+            },
+            {
+                "type": 3,
+                "title": "相关视频",
+                "content": "<iframe frameborder=\"0\" src=\"https://v.qq.com/txp/iframe/player.html?vid=m0508lpjej4\" allowFullScreen=\"true\"></iframe>",
+                "description": "相关视",
+                "filesize": 0,
+                "duration": 0
+            }
+        ],
+        "subProductsList": [
+            {
+                "id": 1,
+                "specification": "6GB+64GB",
+                "colour": 1
+            },
+            {
+                "id": 2,
+                "specification": "8GB+128GB",
+                "colour": 1
+            },
+            {
+                "id": 3,
+                "specification": "6GB+64GB",
+                "colour": 2
+            },
+            {
+                "id": 4,
+                "specification": "8GB+128GB",
+                "colour": 3
+            },
+            {
+                "id": 5,
+                "specification": "8GB+222GB",
+                "colour": 3
+            },
+            {
+                "id": 12,
+                "specification": "x86",
+                "colour": 1
+            },
+            {
+                "id": 13,
+                "specification": "x86",
+                "colour": 1
+            },
+            {
+                "id": 15,
+                "specification": "x86",
+                "colour": 1
+            }
+        ],
+        "availableSpecifications": [  
+            "6GB+64GB",
+            "x86",
+            "8GB+128GB"
+        ],
+        "availableColours": [
+            1,
+            2
+        ]
         }
-      }
+        }
 
 ### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
