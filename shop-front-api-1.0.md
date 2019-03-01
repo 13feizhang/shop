@@ -303,7 +303,7 @@
         }
       }
 
-### 查询子产品价格详情(客户端) [GET] /price/{id}
+### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
      +  id 子产品id
 + Description 
