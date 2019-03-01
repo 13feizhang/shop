@@ -13,7 +13,7 @@
         + mainFeature (String) - 主参数
      + accessory 附件表
         + id (Long) - ID
-        + type (Integer) - 类型(0：视频  1：音频  2:文件,3相关视频)
+        + type (Integer) - 类型(0：视频  1：音频  2:文件 3:相关视频)
         + filename (String) - 存放文件的URL，如果是视频为空
         + extesion (String) - 扩展名
         + title (String) - 名称
@@ -313,8 +313,8 @@
             1,
             2
         ]
-        }
-        }
+       }
+      }
 
 ### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
@@ -357,12 +357,13 @@
                 "creator": 0,
                 "modifier": 0,
                 "subProductId": 3,
-                "tbProductId": 123,
+                "tbProductId": 16,
                 "tbItemId": 11111,
                 "source": 13,
                 "currency": 2,
                 "isInland": 0,
                 "isManual": 0,
+                "reservePrice": "2959.01",
                 "subCurrency": "$",
                 "sourceName": "亚马逊",
                 "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
@@ -399,3 +400,80 @@
             "type": "collects"
         }
       }
+      
+### 查询子产品经销商详情(客户端) [GET] /dealer/mainProduct?productId={id}
++ Parameters
+     +  id 子产品id
++ Description 
+    + dealerName 经销商名称
+    + dealerTel 经销商电话
+    + dealerEmail 经销商邮件
+    + dealerAddress 经销商地址
+    + dealerMainBrand 经销商主营品牌
+
++ Response 200 (Application/json)
+
+       {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 3,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 3,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "/dealer/mainProduct?productId=1&page[number]=1&page[size]=10",
+            "first": "/dealer/mainProduct?productId=1&page[number]=1&page[size]=10",
+            "last": "/dealer/mainProduct?productId=1&page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-14 15:02:14",
+                "modified": "2019-02-27 10:39:45",
+                "dealerName": "米饭星1",
+                "dealerTel": "1",
+                "dealerEmail": "850770722@qq.com",
+                "dealerAddress": "山西",
+                "dealerMainBrand": "德力风根"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-14 15:02:14",
+                "modified": "2019-02-14 15:02:14",
+                "dealerName": "宝迪",
+                "dealerTel": "13911111111",
+                "dealerEmail": "1253619833@qq.com",
+                "dealerAddress": "北京",
+                "dealerMainBrand": "品质生活"
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-14 15:02:14",
+                "modified": "2019-02-14 15:02:14",
+                "dealerName": "易科国际",
+                "dealerTel": "18811111111",
+                "dealerEmail": "1234511111@qq.com",
+                "dealerAddress": "深圳市",
+                "dealerMainBrand": "最新服务"
+            }
+        ]
+      }     
+      
+      
+      
+      
+      
+      
