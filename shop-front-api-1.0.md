@@ -13,7 +13,7 @@
         + mainFeature (String) - 主参数
      + accessory 附件表
         + id (Long) - ID
-        + type (Integer) - 类型(0：视频  1：音频  2:文件)
+        + type (Integer) - 类型(0：视频  1：音频  2:文件,3相关视频)
         + filename (String) - 存放文件的URL，如果是视频为空
         + extesion (String) - 扩展名
         + title (String) - 名称
@@ -122,7 +122,7 @@
 
       {
         "data": {
-        "id": 1,     //子产品的ID  
+        "id": 1,    //子产品ID
         "mainProductId": 1,
         "specification": "6GB+64GB",
         "colour": 1,
@@ -161,7 +161,7 @@
             }
         ],
         "shopUrl": "https://item.jd.com/1234567890",
-        "products": {    //这个下面全部都是主产品的信息
+        "products": {  //主产品信息
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
@@ -222,7 +222,7 @@
         },
         "accessories": [
             {
-                "type": 0,
+                "type": 0,    //0产品视频（和图片放一块的视频）
                 "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
                 "title": "小米8展示视频",
                 "description": "小米8展示视频",
@@ -230,15 +230,15 @@
                 "duration": 0
             },
             {
-                "type": 1,
-                "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
-                "title": "小米8展示音频",
-                "description": "小米8展示音频",
+                "type": 2,  // 2文件
+                "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
+                "title": "文件",
+                "description": "文件下载",
                 "filesize": 0,
                 "duration": 0
             },
             {
-                "type": 1,
+                "type": 1,  //1音频
                 "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
                 "title": "音频",
                 "description": "音频",
@@ -246,10 +246,10 @@
                 "duration": 11
             },
             {
-                "type": 3,
+                "type": 3,  //3相关视频
                 "title": "相关视频",
-                "content": "<iframe frameborder=\"0\" src=\"https://v.qq.com/txp/iframe/player.html?vid=m0508lpjej4\" allowFullScreen=\"true\"></iframe>",
-                "description": "相关视",
+                "content": "m0508lpjej4",
+                "description": "相关视频",
                 "filesize": 0,
                 "duration": 0
             }
@@ -296,7 +296,7 @@
                 "colour": 1
             }
         ],
-        "availableSpecifications": [  
+        "availableSpecifications": [
             "6GB+64GB",
             "x86",
             "8GB+128GB"
