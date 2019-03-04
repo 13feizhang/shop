@@ -117,12 +117,14 @@
      + availableSpecifications 当前子产品<颜色>下有的规格数据
      + availableColours 当前子产品<规格> 下有的颜色数据
      + shopUrl 购买链接
+     + imageRotation 是否有360图片
+     + rotations 360图存放list
  
 + Response 200 (Application/json)
 
       {
         "data": {
-        "id": 1,  //子产品id
+        "id": 1,
         "mainProductId": 1,
         "specification": "6GB+64GB",
         "colour": 1,
@@ -152,22 +154,10 @@
                 "title": "TestPicTURE2",
                 "groupId": 1,
                 "orderNo": 0
-            },
-            {
-                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990605.jpg",
-                "title": "TestPicTURE",
-                "groupId": 36,
-                "orderNo": 1
-            },
-            {
-                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
-                "title": "TestPicTURE",
-                "groupId": 36,
-                "orderNo": 2
             }
         ],
         "shopUrl": "https://item.jd.com/1234567890",
-        "products": {   //下面都是主产品的信息
+        "products": {
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
@@ -319,9 +309,24 @@
         "availableColours": [
             1,
             2
+        ],
+        "imageRotation": true,
+        "rotations": [
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990605.jpg",
+                "title": "TestPicTURE",
+                "groupId": 36,
+                "orderNo": 1
+            },
+            {
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE",
+                "groupId": 36,
+                "orderNo": 2
+            }
         ]
-    }
-}
+        }
+        }
 
 ### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
