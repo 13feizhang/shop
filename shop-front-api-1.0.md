@@ -122,7 +122,7 @@
 
       {
         "data": {
-        "id": 1,
+        "id": 1,  //子产品id
         "mainProductId": 1,
         "specification": "6GB+64GB",
         "colour": 1,
@@ -167,7 +167,7 @@
             }
         ],
         "shopUrl": "https://item.jd.com/1234567890",
-        "products": {
+        "products": {   //下面都是主产品的信息
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
