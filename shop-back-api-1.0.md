@@ -814,3 +814,299 @@ Response (application/json)
         }
         }
 + Request 400  （查询为空）
+
+
+
+
+
++ 2019年03月04日
+     + API初始化
+ 
+## 商城管理 -子产品
++ Data
+    + SubProducts 子产品表
+        + id (Long) - ID
+        + mainProductId (Long) - 主产品ID
+        + subFeature (String) - 自参数
+        + keyWords (String) - 淘宝关键字
+        + specification (String) - 规格
+        + colour (Long) - 颜色ID
+        + thumbsUp (Integer) - 赞
+        + thumbsDown (Integer) - 踩
+        + isShow (Integer) - 是否展示
+        + enabled (int) - 使能 0禁止 1启用
+        + creator (long) - 创建人
+        + modifier (long) - 修改人
+        + created (date) - 创建时间
+        + modified (date) - 修改时间
+    + pictures 产品图片表
+        + id (Long) - ID
+        + pictureurl (String) - 图片链接
+        + extension (String) - 扩展名
+        + title (String) - 名称属性
+        + description (String) - 图片描述
+        + extra (String) - 其它信息
+        + md5 (String) - md5值
+        + groupId (Integer) - 1为正常图；36为360图
+        + orderNo (Integer) - 360图展示顺序
+        + enabled (int) - 使能 0禁止 1启用
+        + creator (long) - 创建人
+        + modifier (long) - 修改人
+        + created (date) - 创建时间
+        + modified (date) - 修改时间 
+
+### 增加 [POST] /subProducts
++ Data
+   
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + SubProducts 子产品表
+        + id (Long) - ID
+        + mainProductId (Long) - 主产品ID
+        + subFeature (String) - 自参数
+        + keyWords (String) - 淘宝关键字
+        + specification (String) - 规格
+        + colour (Long) - 颜色ID
+        + thumbsUp (Integer) - 赞
+        + thumbsDown (Integer) - 踩
+        + isShow (Integer) - 是否展示
+    + pictures 产品图片表
+        + id (Long) - ID
+        + pictureurl (String) - 图片链接
+        + extension (String) - 扩展名
+        + title (String) - 名称属性
+        + description (String) - 图片描述
+        + extra (String) - 其它信息
+        + md5 (String) - md5值
+        + groupId (Integer) - 1为正常图；36为360图
+        + orderNo (Integer) - 360图展示顺序
+        
++ Request  (application/json)
+
+        {
+        "data": {
+        "mainProductId": 1,
+        "subFeature": "{\"拆字\"\":\"松木\"}",
+        "keyWords": "小米,插板",
+        "specification": "经典",
+        "colour": 1,
+        "isShow": 1,
+        "shopUrl": "购买链接",
+        "pictures": [
+            {
+                "pictureurl": "//1static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 1,
+                "orderNo": 0
+            },
+            {
+                "pictureurl": "//2static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 1,
+                "orderNo": 0
+            },
+            {
+                "pictureurl": "//3static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 36,
+                "orderNo": 0
+            },
+            {
+                "pictureurl": "//4static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 36,
+                "orderNo": 0
+            }
+        ]
+        }
+        }
++ Response 200 
+
+        {
+        "data": {
+        "id": 17,
+        "type": "subProducts"
+        }
+        }
+
+
+### 修改 [PATCH] /subProducts/{id}
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + SubProducts 子产品表
+        + id (Long) - ID
+        + mainProductId (Long) - 主产品ID
+        + subFeature (String) - 自参数
+        + keyWords (String) - 淘宝关键字
+        + specification (String) - 规格
+        + colour (Long) - 颜色ID
+        + thumbsUp (Integer) - 赞
+        + thumbsDown (Integer) - 踩
+        + isShow (Integer) - 是否展示
+    + pictures 产品图片表
+        + id (Long) - ID
+        + pictureurl (String) - 图片链接
+        + extension (String) - 扩展名
+        + title (String) - 名称属性
+        + description (String) - 图片描述
+        + extra (String) - 其它信息
+        + md5 (String) - md5值
+        + groupId (Integer) - 1为正常图；36为360图
+        + orderNo (Integer) - 360图展示顺序
+    
++ Request (application/json)
+ 
+        {
+        "data": {
+        "id": 17,
+        "mainProductId": 1,
+        "subFeature": "{\"拆字\"\":\"黄松木\"}",
+        "keyWords": "小米1,插板1",
+        "specification": "经典",
+        "colour": 1,
+        "isShow": 1,
+        "thumbsUp":10,
+        "thumbsDown":20,
+        "shopUrl": "购买链接",
+        "pictures": [
+            {
+                "id": 11,
+                "pictureurl": "//1static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 1,
+                "orderNo": 0
+            },
+            {
+                "id": 12,
+                "pictureurl": "//static.mifanxing.com/article/image/253/86/5700886.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 1,
+                "orderNo": 1
+            },
+            {
+                "id": 13,
+                "pictureurl": "//static.mifanxing.com/article/image/253/86/570088116.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 36,
+                "orderNo": 0
+            },
+            {
+                "id": 14,
+                "pictureurl": "//static.mifanxing.com/article/image/253/86/570081186.jpg",
+                "title": "TestPicTURE2",
+                "groupId": 36,
+                "orderNo": 0
+            }
+        ]
+        }
+        }
+
++ Response 200 
+
+### 删除 [DELETE] /subProducts/{id}
++ Description
+  + [MUST]  Authenticated
+  + [MUST] ROLE_ADMIN 
++  Response 204
+
+
+### 查询后台子产品的相关信息 [GET] /subProducts/admin/{id}
+查询出子产品的信息
++ Parameters
+    + id  子产品的信息
+    
++ Request (application/json)
+       
+        {
+        "data": {
+        "id": 17,
+        "enabled": 1,
+        "creator": 0,
+        "modifier": 0,
+        "created": "2019-03-04 14:03:46",
+        "modified": "2019-03-04 14:28:11",
+        "mainProductId": 1,
+        "subFeature": "{\"拆字\"\":\"黄松木\"}",
+        "keyWords": "小米1,插板1",
+        "specification": "经典",
+        "colour": 1,
+        "thumbsUp": 0,
+        "thumbsDown": 0,
+        "isShow": 1,
+        "pictures": [
+            {
+                "id": 11,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-04 14:16:25",
+                "modified": "2019-03-04 14:16:25",
+                "pictureurl": "//1static.mifanxing.com/wx/image/29/15/990601.jpg",
+                "title": "TestPicTURE2",
+                "md5": "0",
+                "groupId": 1,
+                "orderNo": 0
+            },
+            {
+                "id": 12,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-04 14:16:27",
+                "modified": "2019-03-04 14:16:27",
+                "pictureurl": "//static.mifanxing.com/article/image/253/86/5700886.jpg",
+                "title": "TestPicTURE2",
+                "md5": "147524386900817203547092139257261658029",
+                "groupId": 1,
+                "orderNo": 1
+            }
+        ],
+        "imageRotation": true,
+        "rotations": [
+            {
+                "id": 13,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-04 14:16:29",
+                "modified": "2019-03-04 14:16:29",
+                "pictureurl": "//static.mifanxing.com/article/image/253/86/570088116.jpg",
+                "title": "TestPicTURE2",
+                "md5": "0",
+                "groupId": 36,
+                "orderNo": 0
+            },
+            {
+                "id": 14,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-04 14:16:29",
+                "modified": "2019-03-04 14:16:29",
+                "pictureurl": "//static.mifanxing.com/article/image/253/86/570081186.jpg",
+                "title": "TestPicTURE2",
+                "md5": "0",
+                "groupId": 36,
+                "orderNo": 0
+            }
+        ],
+        "colourClass": {
+            "id": 1,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-02-20 11:08:46",
+            "modified": "2019-02-20 11:08:50",
+            "colourName": "红色",
+            "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+        }
+        }
+        }
+
++ Request 400  （查询为空）
