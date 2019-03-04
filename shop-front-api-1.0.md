@@ -324,9 +324,9 @@
                 "groupId": 36,
                 "orderNo": 2
             }
-        ]
-        }
-        }
+         ]
+       }
+      }
 
 ### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
@@ -361,7 +361,8 @@
                 "reservePrice": "325",
                 "subCurrency": "¥",
                 "sourceName": "淘宝",
-                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                "salesVolume": 10758
             },
             {
                 "id": 5,
@@ -378,7 +379,8 @@
                 "reservePrice": "2959.01",
                 "subCurrency": "$",
                 "sourceName": "亚马逊",
-                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                "salesVolume": 22
             }
         ]
       }
@@ -482,4 +484,4 @@
                 "dealerMainBrand": "最新服务"
             }
         ]
-      }  
+      }
