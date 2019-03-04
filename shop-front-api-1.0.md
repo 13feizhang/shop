@@ -50,7 +50,7 @@
         + extra (String) - 其它信息
         + md5 (String) - md5值
         + groupId (Integer) - 1为正常图；36为360图
-        + orderNo (Integer) - 引用
+        + orderNo (Integer) - 360图展示顺序
         + enabled (int) - 使能 0禁止 1启用
         + creator (long) - 创建人
         + modifier (long) - 修改人
@@ -122,46 +122,52 @@
 
       {
         "data": {
-        "id": 1,    //子产品ID
+        "id": 1,
         "mainProductId": 1,
         "specification": "6GB+64GB",
         "colour": 1,
-        "thumbsUp": 14,
-        "thumbsDown": 5,
+        "thumbsUp": 17,
+        "thumbsDown": 9,
         "pictures": [
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
+                "groupId": 1,
                 "orderNo": 0
             },
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990604.jpg",
                 "title": "TestPicTURE",
+                "groupId": 1,
                 "orderNo": 0
             },
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990602.jpg",
                 "title": "TestPicTURE",
+                "groupId": 1,
                 "orderNo": 0
             },
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990603.jpg",
                 "title": "TestPicTURE2",
+                "groupId": 1,
                 "orderNo": 0
             },
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990605.jpg",
                 "title": "TestPicTURE",
-                "orderNo": 0
+                "groupId": 36,
+                "orderNo": 1
             },
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE",
-                "orderNo": 0
+                "groupId": 36,
+                "orderNo": 2
             }
         ],
         "shopUrl": "https://item.jd.com/1234567890",
-        "products": {  //主产品信息
+        "products": {
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
@@ -222,7 +228,7 @@
         },
         "accessories": [
             {
-                "type": 0,    //0产品视频（和图片放一块的视频）
+                "type": 0,
                 "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
                 "title": "小米8展示视频",
                 "description": "小米8展示视频",
@@ -230,7 +236,7 @@
                 "duration": 0
             },
             {
-                "type": 2,  // 2文件
+                "type": 2,
                 "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
                 "title": "文件",
                 "description": "文件下载",
@@ -238,7 +244,7 @@
                 "duration": 0
             },
             {
-                "type": 1,  //1音频
+                "type": 1,
                 "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
                 "title": "音频",
                 "description": "音频",
@@ -246,7 +252,7 @@
                 "duration": 11
             },
             {
-                "type": 3,  //3相关视频
+                "type": 3,
                 "title": "相关视频",
                 "content": "m0508lpjej4",
                 "description": "相关视频",
@@ -254,10 +260,11 @@
                 "duration": 0
             },
             {
-                "type": 3,  //3相关视频
-                "title": "相关视频2",
+                "type": 3,
+                "filename": "",
+                "title": "相关视频1",
                 "content": "m0508lpjej4",
-                "description": "相关视频2",
+                "description": "相关视频1",
                 "filesize": 0,
                 "duration": 0
             }
@@ -313,8 +320,8 @@
             1,
             2
         ]
-       }
-      }
+    }
+}
 
 ### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
@@ -470,4 +477,4 @@
                 "dealerMainBrand": "最新服务"
             }
         ]
-      }     
+      }  
