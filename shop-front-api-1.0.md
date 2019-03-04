@@ -340,6 +340,7 @@
     + subCurrency 币别名称
     + sourceName 来源名称
     + sourceLogo 来源logo
+    + salesVolume 30天销量
 + Response 200 (Application/json)
 
        {
