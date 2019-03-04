@@ -122,10 +122,11 @@
  
 + Response 200 (Application/json)
 
-      {
+        {
         "data": {
         "id": 1,
         "mainProductId": 1,
+        "subFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \t\"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
         "specification": "6GB+64GB",
         "colour": 1,
         "thumbsUp": 17,
@@ -168,8 +169,10 @@
             "briefDescription": "【品质特惠】骁龙845处理器，成交价2399！红外人脸解锁，AI变焦双摄，AI语音助手！推荐购买白色",
             "description": "小米公司最新款手机",
             "brandId": 1,
+            "mainFeature": "{\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } }",
             "specifications": [
                 "6GB+64GB",
+                "经典",
                 "x86",
                 "8GB+222GB",
                 "8GB+128GB"
@@ -214,6 +217,234 @@
                     "title": "BLUE无线麦克风",
                     "leaf": 1
                 }
+            ],
+            "accessories": [
+                {
+                    "id": 1,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-20 11:08:21",
+                    "modified": "2019-02-20 11:08:24",
+                    "type": 0,
+                    "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
+                    "title": "小米8展示视频",
+                    "description": "小米8展示视频",
+                    "filesize": 0,
+                    "duration": 0
+                },
+                {
+                    "id": 2,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-22 10:30:05",
+                    "modified": "2019-02-22 10:30:05",
+                    "type": 2,
+                    "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
+                    "title": "文件",
+                    "description": "文件下载",
+                    "filesize": 0,
+                    "duration": 0
+                },
+                {
+                    "id": 3,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "type": 1,
+                    "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
+                    "title": "音频",
+                    "description": "音频",
+                    "filesize": 0,
+                    "duration": 11
+                },
+                {
+                    "id": 4,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-28 16:44:03",
+                    "modified": "2019-02-28 16:44:06",
+                    "type": 3,
+                    "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
+                    "title": "相关视频",
+                    "content": "m0508lpjej4",
+                    "description": "相关视频",
+                    "filesize": 0,
+                    "duration": 0
+                },
+                {
+                    "id": 5,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-01 14:43:27",
+                    "modified": "2019-03-01 14:43:27",
+                    "type": 3,
+                    "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
+                    "title": "相关视频1",
+                    "content": "m0508lpjej4",
+                    "description": "相关视频1",
+                    "filesize": 0,
+                    "duration": 0
+                }
+            ],
+            "subProductsList": [
+                {
+                    "id": 1,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-04 10:15:22",
+                    "modified": "2019-03-04 10:15:22",
+                    "mainProductId": 1,
+                    "subFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \t\"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
+                    "keyWords": "小米8",
+                    "specification": "6GB+64GB",
+                    "colour": 1,
+                    "thumbsUp": 17,
+                    "thumbsDown": 9,
+                    "isShow": 1
+                },
+                {
+                    "id": 2,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-26 11:27:02",
+                    "modified": "2019-02-26 11:27:02",
+                    "mainProductId": 1,
+                    "keyWords": "小米8",
+                    "specification": "8GB+128GB",
+                    "colour": 1,
+                    "thumbsUp": 8,
+                    "thumbsDown": 2,
+                    "isShow": 1
+                },
+                {
+                    "id": 3,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-20 11:05:22",
+                    "modified": "2019-02-20 11:05:25",
+                    "mainProductId": 1,
+                    "keyWords": "小米8",
+                    "specification": "6GB+64GB",
+                    "colour": 2,
+                    "thumbsUp": 1,
+                    "thumbsDown": 1,
+                    "isShow": 1
+                },
+                {
+                    "id": 4,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-20 11:05:18",
+                    "modified": "2019-02-20 11:05:14",
+                    "mainProductId": 1,
+                    "keyWords": "小米8",
+                    "specification": "8GB+128GB",
+                    "colour": 3,
+                    "thumbsUp": 1,
+                    "thumbsDown": 1,
+                    "isShow": 1
+                },
+                {
+                    "id": 5,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "mainProductId": 1,
+                    "keyWords": "小米8",
+                    "specification": "8GB+222GB",
+                    "colour": 3,
+                    "thumbsUp": 1,
+                    "thumbsDown": 1,
+                    "isShow": 1
+                },
+                {
+                    "id": 12,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-27 15:51:07",
+                    "modified": "2019-02-27 15:51:07",
+                    "mainProductId": 1,
+                    "subFeature": "{\"品质\":\"另类\"}",
+                    "keyWords": "小米91",
+                    "specification": "x86",
+                    "colour": 1,
+                    "thumbsUp": 0,
+                    "thumbsDown": 100,
+                    "isShow": 1
+                },
+                {
+                    "id": 13,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-27 15:53:52",
+                    "modified": "2019-02-27 15:53:52",
+                    "mainProductId": 1,
+                    "subFeature": "{\"品质\":\"另类\"}",
+                    "keyWords": "小米91",
+                    "specification": "x86",
+                    "colour": 1,
+                    "thumbsUp": 0,
+                    "thumbsDown": 100,
+                    "isShow": 1
+                },
+                {
+                    "id": 15,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-27 15:56:48",
+                    "modified": "2019-02-27 15:56:48",
+                    "mainProductId": 1,
+                    "subFeature": "{\"品质\":\"另类\"}",
+                    "keyWords": "小米91",
+                    "specification": "x86",
+                    "colour": 1,
+                    "thumbsUp": 0,
+                    "thumbsDown": 100,
+                    "isShow": 1
+                },
+                {
+                    "id": 16,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-04 14:00:09",
+                    "modified": "2019-03-04 14:00:09",
+                    "mainProductId": 1,
+                    "subFeature": "{\"拆字\"\":\"松木\"}",
+                    "keyWords": "小米,插板",
+                    "specification": "经典",
+                    "colour": 1,
+                    "thumbsUp": 0,
+                    "thumbsDown": 0,
+                    "isShow": 1
+                },
+                {
+                    "id": 17,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-04 14:03:46",
+                    "modified": "2019-03-04 14:28:11",
+                    "mainProductId": 1,
+                    "subFeature": "{\"拆字\"\":\"黄松木\"}",
+                    "keyWords": "小米1,插板1",
+                    "specification": "经典",
+                    "colour": 1,
+                    "thumbsUp": 0,
+                    "thumbsDown": 0,
+                    "isShow": 1
+                }
             ]
         },
         "accessories": [
@@ -243,6 +474,7 @@
             },
             {
                 "type": 3,
+                "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
                 "title": "相关视频",
                 "content": "m0508lpjej4",
                 "description": "相关视频",
@@ -251,7 +483,7 @@
             },
             {
                 "type": 3,
-                "filename": "",
+                "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
                 "title": "相关视频1",
                 "content": "m0508lpjej4",
                 "description": "相关视频1",
@@ -299,10 +531,21 @@
                 "id": 15,
                 "specification": "x86",
                 "colour": 1
+            },
+            {
+                "id": 16,
+                "specification": "经典",
+                "colour": 1
+            },
+            {
+                "id": 17,
+                "specification": "经典",
+                "colour": 1
             }
         ],
         "availableSpecifications": [
             "6GB+64GB",
+            "经典",
             "x86",
             "8GB+128GB"
         ],
@@ -324,9 +567,9 @@
                 "groupId": 36,
                 "orderNo": 2
             }
-         ]
-       }
-      }
+        ]
+        }
+        }
 
 ### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
