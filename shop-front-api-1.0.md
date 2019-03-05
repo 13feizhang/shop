@@ -2,6 +2,10 @@
 ## 子产品模块
 + 2019年02月20日
     + API初始化 
+     
+    
++ 2019年03月05日
+    + 添加逛一逛接口  
 + Data
     + products 主产品表
         + id (Long) - ID
@@ -729,3 +733,165 @@
             }
         ]
       }
+
+
+
+
++ 2019年03月05日
+    + 添加逛一逛接口 
++ Data
+    + products 主产品表
+        + productName (String) - 产品名字
+        + volume (Integer) - 30天销量
+        + price (String) - 产品价格
+        + briefDescription (String) - 简述
+        + shopUrl (String) - 购买链接
+        + brands (Brands) - 品牌
+        + subProductPricesSource (SubProductPricesSource) - 产品价格来源
+    + Brands 品牌表
+        + name (String) 品牌评测
+        + logo (String) logo
+    + SubProductPricesSource 产品价格来源表
+        + sourceName  (String) 来源商城名字
+        + sourceUrl (String) 来源logo
+    
+
+### 查询逛一逛详情 [GET] /subProducts/gyg/{id}
++ Parameters
+     +  id 子产品id
++ Description 
+    
+
++ Response 200 (Application/json)
+
+       {
+        "data": [
+        {
+            "productName": null,
+            "price": "200.5",
+            "volume": null,
+            "shopUrl": "https://item.jd.com/1234567890",
+            "subProductPricesSource": {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-20 11:08:46",
+                "modified": "2019-02-20 11:08:50",
+                "sourceName": "淘宝",
+                "sourceUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            "brands": {
+                "id": 1,
+                "name": "小米",
+                "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            }
+        },
+        {
+            "productName": "Blue yeti雪怪专业电容话筒麦克风K歌录音直播USB直插MIC原装进口",
+            "price": "1298",
+            "volume": 0,
+            "shopUrl": "https://s.click.taobao.com/t?e=m%3D2%26s%3DduXnt4IYtrkcQipKwQzePOeEDrYVVa64r4ll3HtqqoxyINtkUhsv0H1AekX3rfvuxs%2FqIRTwxIbFplEiCvCZ5tg0f9hkTsUBriOItY53i0EeQ4ho2CZ9o9oUVTgpC4THSBaygToy7XluaWh2wOcFsvewEqIJmYQDjB7r%2B0aDb9GM3h%2FwNLE3G8%2B9ZyxvICI1vit6BeTR7PshhQs2DjqgEA%3D%3D&scm=null&pvid=100_11.178.152.226_33234_531551348464066413&app_pvid=59590_11.186.136.22_14508_1551348464058&ptl=floorId:2836;pvid:100_11.178.152.226_33234_531551348464066413;app_pvid:59590_11.186.136.22_14508_1551348464058&xId=iCvD15fsuZLaj5m3yPFMBPbEBw4qEpSs77MB0VhHRtYwNZCUvAtLVwpRKejdBwn7gzRsl81351yyuxEBO3SUfk&union_lens=lensId:0bba8816_0c6d_1693392f9e4_65dc",
+            "subProductPricesSource": {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-20 11:08:46",
+                "modified": "2019-02-20 11:08:50",
+                "sourceName": "淘宝",
+                "sourceUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            "brands": {
+                "id": 1,
+                "name": "小米",
+                "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            }
+        },
+        {
+            "productName": "Blue yeti studio雪怪网络全民K歌录音手机直播电容麦克风USB话筒",
+            "price": "1899",
+            "volume": 0,
+            "shopUrl": "https://s.click.taobao.com/t?e=m%3D2%26s%3DcunVR0JXax0cQipKwQzePOeEDrYVVa64r4ll3HtqqoxyINtkUhsv0H1AekX3rfvuxs%2FqIRTwxIbFplEiCvCZ5tg0f9hkTsUBriOItY53i0EeQ4ho2CZ9o9oUVTgpC4THSBaygToy7XknopNk5QTPVmKNqjg6OUcpjB7r%2B0aDb9GM3h%2FwNLE3GzQdi%2FB65lCsod2aSEi32o0hhQs2DjqgEA%3D%3D&scm=null&pvid=100_11.178.152.226_33234_531551348464066413&app_pvid=59590_11.186.136.22_14508_1551348464058&ptl=floorId:2836;pvid:100_11.178.152.226_33234_531551348464066413;app_pvid:59590_11.186.136.22_14508_1551348464058&xId=JKdZ0SmF3IzFZC6LnxjIC232RzEizAIPFo0TpBmTLHzSTZYW9pNehDkJij7cD5QMFxkiiKOhKWESPBNxoKA81P&union_lens=lensId:0bba8816_0c6d_1693392f9e4_65dd",
+            "subProductPricesSource": {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-20 11:08:46",
+                "modified": "2019-02-20 11:08:50",
+                "sourceName": "淘宝",
+                "sourceUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            "brands": {
+                "id": 1,
+                "name": "小米",
+                "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            }
+        },
+        
+        {
+            "productName": "无线充电器苹果专用原装8plus小米6三星无线充type-c手机通用华为",
+            "price": "59.00",
+            "volume": 0,
+            "shopUrl": "https://uland.taobao.com/coupon/edetail?e=%2BRGG3J6vVE8GQASttHIRqS4Z698vI3KZeIG8W1%2BEkZ%2Fyi1aSyqbpmpxprDZKF0z1ty3wSATn%2BU2DLZnGB%2BaaZmB1gIYhu1R9bd76m3V5xpbgNMiuZHn6%2Ffs69hmQwiAFZ%2FuyoioKit2EZI8OxySlHAMFTfGLA%2FdyQ8Bi9zs%2FsPJg%2FBV7tG3PlBdOOR5C4gXnQS0Flu%2FfbSog%2BeE%2BjpQFGFLajOROSSHlUpLf3IbvQCCEnEzHOnSRZA%3D%3D&traceId=0b0b142d15513512381457522e",
+            "subProductPricesSource": {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-20 11:08:46",
+                "modified": "2019-02-20 11:08:50",
+                "sourceName": "淘宝",
+                "sourceUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            "brands": {
+                "id": 1,
+                "name": "小米",
+                "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            }
+        },
+        {
+            "productName": "新款小米8手机壳真皮翻盖小米8手机套全包防摔保护皮套轻薄商务壳",
+            "price": "138.00",
+            "volume": 0,
+            "shopUrl": "https://uland.taobao.com/coupon/edetail?e=NdQtS2HqnbwGQASttHIRqQA1%2B9fkH6cbnkwe8HWpltlUm%2Fg8xRLmNq6XJ17Tl5BdiA4ubl2b%2B4Iks8bJitH8ilj4A3rjSH0kbd76m3V5xpbgNMiuZHn6%2Ffs69hmQwiAFZ%2FuyoioKit2EZI8OxySlHAMFTfGLA%2FdyQ8Bi9zs%2FsPJg%2FBV7tG3PlBdOOR5C4gXnQS0Flu%2FfbSog%2BeE%2BjpQFGFLajOROSSHlUpLf3IbvQCCEnEzHOnSRZA%3D%3D&traceId=0b0b142d15513512381457522e",
+            "subProductPricesSource": {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-20 11:08:46",
+                "modified": "2019-02-20 11:08:50",
+                "sourceName": "淘宝",
+                "sourceUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            "brands": {
+                "id": 1,
+                "name": "小米",
+                "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            }
+        },
+        {
+            "productName": "无线充电器苹果专用iPhonex原装QI快充note9小米2s充电器8万能充",
+            "price": "79.00",
+            "volume": 0,
+            "shopUrl": "https://uland.taobao.com/coupon/edetail?e=78QDZIMu5N0GQASttHIRqS7%2BjsRU3AdVlHnee4yrke3yi1aSyqbpmpxprDZKF0z1ty3wSATn%2BU2DLZnGB%2BaaZmB1gIYhu1R9bd76m3V5xpbgNMiuZHn6%2Ffs69hmQwiAFZ%2FuyoioKit2EZI8OxySlHAMFTfGLA%2FdyQ8Bi9zs%2FsPJg%2FBV7tG3PlBdOOR5C4gXnQS0Flu%2FfbSog%2BeE%2BjpQFGFLajOROSSHlUpLf3IbvQCCEnEzHOnSRZA%3D%3D&traceId=0b0b142d15513512381457522e",
+            "subProductPricesSource": {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-20 11:08:46",
+                "modified": "2019-02-20 11:08:50",
+                "sourceName": "淘宝",
+                "sourceUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            },
+            "brands": {
+                "id": 1,
+                "name": "小米",
+                "logo": "/static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            }
+        }
+        ]
+        }
