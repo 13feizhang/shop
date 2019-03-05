@@ -267,7 +267,7 @@
                     "created": "2019-02-28 16:44:03",
                     "modified": "2019-02-28 16:44:06",
                     "type": 3,
-                    "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
+                    "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",  //封面图
                     "title": "相关视频",
                     "content": "m0508lpjej4",
                     "description": "相关视频",
