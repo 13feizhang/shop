@@ -13,7 +13,7 @@
         + mainFeature (String) - 主参数
      + accessory 附件表
         + id (Long) - ID
-        + type (Integer) - 类型(0：视频  1：音频  2:文件 3:相关视频)
+        + type (Integer) - 类型(0：产品视频  1：音频  2:文件 3:相关视频)
         + filename (String) - 存放文件的URL，如果是视频为空
         + extesion (String) - 扩展名
         + title (String) - 名称
