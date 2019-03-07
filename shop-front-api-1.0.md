@@ -5,7 +5,9 @@
      
     
 + 2019年03月05日
-    + 添加逛一逛接口  
+    + 添加逛一逛接口 
++ 2019年03月07日
+    + 在子产品查询接口添加
 + Data
     + products 主产品表
         + id (Long) - ID
@@ -123,18 +125,18 @@
      + shopUrl 购买链接
      + imageRotation 是否有360图片
      + rotations 360图存放list
+     + coupon 是否有券
  
 + Response 200 (Application/json)
 
         {
         "data": {
-        "id": 1,
+        "id": 2,
         "mainProductId": 1,
-        "subFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \t\"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
-        "specification": "6GB+64GB",
+        "specification": "8GB+128GB",
         "colour": 1,
-        "thumbsUp": 17,
-        "thumbsDown": 9,
+        "thumbsUp": 8,
+        "thumbsDown": 2,
         "pictures": [
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
@@ -161,7 +163,7 @@
                 "orderNo": 0
             }
         ],
-        "shopUrl": "https://item.jd.com/1234567890",
+        "shopUrl": "//s.click.taobao.com/t?e=m%3D2%26s%3DHpflsm941igcQipKwQzePOeEDrYVVa64r4ll3HtqqoxyINtkUhsv0ELduV78cHqXBO4jgj4QPfnFplEiCvCZ5tg0f9hkTsUBriOItY53i0EeQ4ho2CZ9o9oUVTgpC4THSBaygToy7XlHV8A77VHf6dPpLLmw2lzkjB7r%2B0aDb9GM3h%2FwNLE3G3NpyAJV9wj%2FND4oVtUG3oTGDmntuH4VtA%3D%3D&scm=null&pvid=100_11.178.152.226_69594_3711551941185636933&app_pvid=59590_11.175.105.51_675_1551941185632&ptl=floorId:2836;pvid:100_11.178.152.226_69594_3711551941185636933;app_pvid:59590_11.175.105.51_675_1551941185632&xId=kD8KnOB9YuTssESUeooqpOYzhil5pKJ2zrnjpeFkSTyZ2tRHtBTNdIwo2VT0dDjao52NcXC57OxEdKEfmhK2hd&union_lens=lensId:0baf6933_0c04_16956e7308c_451a",
         "products": {
             "enabled": 1,
             "creator": 0,
@@ -173,7 +175,7 @@
             "briefDescription": "【品质特惠】骁龙845处理器，成交价2399！红外人脸解锁，AI变焦双摄，AI语音助手！推荐购买白色",
             "description": "小米公司最新款手机",
             "brandId": 1,
-            "mainFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
+            "mainFeature": "{\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } }",
             "specifications": [
                 "6GB+64GB",
                 "经典",
@@ -271,7 +273,7 @@
                     "created": "2019-02-28 16:44:03",
                     "modified": "2019-02-28 16:44:06",
                     "type": 3,
-                    "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",  //封面图
+                    "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
                     "title": "相关视频",
                     "content": "m0508lpjej4",
                     "description": "相关视频",
@@ -300,16 +302,17 @@
                     "enabled": 1,
                     "creator": 0,
                     "modifier": 0,
-                    "created": "2019-03-04 10:15:22",
-                    "modified": "2019-03-04 10:15:22",
+                    "created": "2019-03-07 15:52:38",
+                    "modified": "2019-03-07 15:52:38",
                     "mainProductId": 1,
                     "subFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \t\"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
                     "keyWords": "小米8",
                     "specification": "6GB+64GB",
                     "colour": 1,
-                    "thumbsUp": 17,
+                    "thumbsUp": 31,
                     "thumbsDown": 9,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 2,
@@ -319,12 +322,13 @@
                     "created": "2019-02-26 11:27:02",
                     "modified": "2019-02-26 11:27:02",
                     "mainProductId": 1,
-                    "keyWords": "小米8",
+                    "keyWords": "blue,yeti",
                     "specification": "8GB+128GB",
                     "colour": 1,
                     "thumbsUp": 8,
                     "thumbsDown": 2,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 3,
@@ -334,12 +338,13 @@
                     "created": "2019-02-20 11:05:22",
                     "modified": "2019-02-20 11:05:25",
                     "mainProductId": 1,
-                    "keyWords": "小米8",
+                    "keyWords": "Shure,舒尔,SM58S",
                     "specification": "6GB+64GB",
                     "colour": 2,
                     "thumbsUp": 1,
                     "thumbsDown": 1,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 4,
@@ -349,12 +354,13 @@
                     "created": "2019-02-20 11:05:18",
                     "modified": "2019-02-20 11:05:14",
                     "mainProductId": 1,
-                    "keyWords": "小米8",
+                    "keyWords": "Shure,舒尔,SM58S",
                     "specification": "8GB+128GB",
                     "colour": 3,
                     "thumbsUp": 1,
                     "thumbsDown": 1,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 5,
@@ -362,12 +368,13 @@
                     "creator": 0,
                     "modifier": 0,
                     "mainProductId": 1,
-                    "keyWords": "小米8",
+                    "keyWords": "JBL,GO2",
                     "specification": "8GB+222GB",
                     "colour": 3,
                     "thumbsUp": 1,
                     "thumbsDown": 1,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 12,
@@ -383,7 +390,8 @@
                     "colour": 1,
                     "thumbsUp": 0,
                     "thumbsDown": 100,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 13,
@@ -399,7 +407,8 @@
                     "colour": 1,
                     "thumbsUp": 0,
                     "thumbsDown": 100,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 15,
@@ -415,7 +424,8 @@
                     "colour": 1,
                     "thumbsUp": 0,
                     "thumbsDown": 100,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 16,
@@ -431,7 +441,8 @@
                     "colour": 1,
                     "thumbsUp": 0,
                     "thumbsDown": 0,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 },
                 {
                     "id": 17,
@@ -447,12 +458,14 @@
                     "colour": 1,
                     "thumbsUp": 0,
                     "thumbsDown": 0,
-                    "isShow": 1
+                    "isShow": 1,
+                    "coupon": false
                 }
             ]
         },
         "accessories": [
             {
+                "created": "2019-02-20 11:08:21",
                 "type": 0,
                 "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
                 "title": "小米8展示视频",
@@ -461,6 +474,7 @@
                 "duration": 0
             },
             {
+                "created": "2019-02-22 10:30:05",
                 "type": 2,
                 "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
                 "title": "文件",
@@ -477,6 +491,7 @@
                 "duration": 11
             },
             {
+                "created": "2019-02-28 16:44:03",
                 "type": 3,
                 "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
                 "title": "相关视频",
@@ -486,6 +501,7 @@
                 "duration": 0
             },
             {
+                "created": "2019-03-01 14:43:27",
                 "type": 3,
                 "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
                 "title": "相关视频1",
@@ -499,52 +515,62 @@
             {
                 "id": 1,
                 "specification": "6GB+64GB",
-                "colour": 1
+                "colour": 1,
+                "coupon": false
             },
             {
                 "id": 2,
                 "specification": "8GB+128GB",
-                "colour": 1
+                "colour": 1,
+                "coupon": false
             },
             {
                 "id": 3,
                 "specification": "6GB+64GB",
-                "colour": 2
+                "colour": 2,
+                "coupon": false
             },
             {
                 "id": 4,
                 "specification": "8GB+128GB",
-                "colour": 3
+                "colour": 3,
+                "coupon": false
             },
             {
                 "id": 5,
                 "specification": "8GB+222GB",
-                "colour": 3
+                "colour": 3,
+                "coupon": false
             },
             {
                 "id": 12,
                 "specification": "x86",
-                "colour": 1
+                "colour": 1,
+                "coupon": false
             },
             {
                 "id": 13,
                 "specification": "x86",
-                "colour": 1
+                "colour": 1,
+                "coupon": false
             },
             {
                 "id": 15,
                 "specification": "x86",
-                "colour": 1
+                "colour": 1,
+                "coupon": false
             },
             {
                 "id": 16,
                 "specification": "经典",
-                "colour": 1
+                "colour": 1,
+                "coupon": false
             },
             {
                 "id": 17,
                 "specification": "经典",
-                "colour": 1
+                "colour": 1,
+                "coupon": false
             }
         ],
         "availableSpecifications": [
@@ -555,23 +581,24 @@
         ],
         "availableColours": [
             1,
-            2
+            3
         ],
         "imageRotation": true,
         "rotations": [
             {
-                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990605.jpg",
+                "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE",
                 "groupId": 36,
-                "orderNo": 1
+                "orderNo": 3
             },
             {
                 "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE",
                 "groupId": 36,
-                "orderNo": 2
+                "orderNo": 4
             }
-        ]
+        ],
+        "coupon": false
         }
         }
 
