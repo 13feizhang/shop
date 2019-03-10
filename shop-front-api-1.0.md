@@ -607,6 +607,8 @@
      +  id 子产品id
 + Description 
     +  [MUST] Authenticated
+    +  marketPrice 市场价格
+    +  priceSource 价格来源
     + subProductId 子产品ID
     + tbProductId 淘宝表ID
     + tbItemId 实际淘宝id
@@ -618,46 +620,137 @@
 + Response 200 (Application/json)
 
        {
-        "data": [
-            {
-                "id": 3,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2019-02-22 10:19:27",
-                "modified": "2019-02-22 10:19:27",
-                "subProductId": 3,
-                "tbProductId": 3,
-                "tbItemId": 10003,
-                "source": 1,
-                "currency": 1,
-                "isInland": 1,
-                "isManual": 0,
-                "reservePrice": "325",
-                "subCurrency": "¥",
-                "sourceName": "淘宝",
-                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
-                "salesVolume": 10758
-            },
-            {
-                "id": 5,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "subProductId": 3,
-                "tbProductId": 16,
-                "tbItemId": 11111,
-                "source": 13,
-                "currency": 2,
-                "isInland": 0,
-                "isManual": 0,
-                "reservePrice": "2959.01",
-                "subCurrency": "$",
-                "sourceName": "亚马逊",
-                "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
-                "salesVolume": 22
-            }
-        ]
+        "data": {
+            "marketPrice": [
+                {
+                    "district": "国外",
+                    "currency": "$",
+                    "pricesRange": "5.3~54.0"
+                },
+                {
+                    "district": "国内",
+                    "currency": "¥",
+                    "pricesRange": "200.5~2649.01"
+                }
+            ],
+            "priceSource": [
+                {
+                    "id": 1,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-22 10:19:27",
+                    "modified": "2019-02-22 10:19:27",
+                    "subProductId": 1,
+                    "tbProductId": 1,
+                    "tbItemId": 10001,
+                    "source": 1,
+                    "currency": 1,
+                    "isInland": 1,
+                    "isManual": 0,
+                    "reservePrice": "200.5",
+                    "subCurrency": "¥",
+                    "sourceName": "淘宝",
+                    "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+                },
+                {
+                    "id": 2,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-02-22 10:19:27",
+                    "modified": "2019-02-22 10:19:27",
+                    "subProductId": 1,
+                    "tbProductId": 2,
+                    "tbItemId": 10002,
+                    "source": 2,
+                    "currency": 1,
+                    "isInland": 1,
+                    "isManual": 1,
+                    "manualPurchaseLink": "是多少",
+                    "reservePrice": "224",
+                    "subCurrency": "¥",
+                    "sourceName": "京东",
+                    "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+                },
+                {
+                    "id": 6,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-08 18:30:46",
+                    "subProductId": 1,
+                    "tbProductId": 17,
+                    "tbItemId": 577823242934,
+                    "source": 3,
+                    "currency": 1,
+                    "isInland": 1,
+                    "isManual": 0,
+                    "reservePrice": "2649.01",
+                    "subCurrency": "¥",
+                    "sourceName": "苏宁",
+                    "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                    "salesVolume": 54
+                },
+                {
+                    "id": 7,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-08 18:37:46",
+                    "subProductId": 1,
+                    "tbProductId": 21,
+                    "tbItemId": 556614091011,
+                    "source": 14,
+                    "currency": 2,
+                    "isInland": 0,
+                    "isManual": 0,
+                    "reservePrice": "54.0",
+                    "subCurrency": "$",
+                    "sourceName": "洋码头",
+                    "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                    "salesVolume": 48
+                },
+                {
+                    "id": 8,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-08 18:40:09",
+                    "subProductId": 1,
+                    "tbProductId": 23,
+                    "tbItemId": 576583014190,
+                    "source": 15,
+                    "currency": 2,
+                    "isInland": 0,
+                    "isManual": 0,
+                    "reservePrice": "5.30",
+                    "subCurrency": "$",
+                    "sourceName": "windelnde",
+                    "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                    "salesVolume": 10758
+                },
+                {
+                    "id": 9,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2019-03-08 18:41:37",
+                    "subProductId": 1,
+                    "tbProductId": 31,
+                    "tbItemId": 563969168235,
+                    "source": 13,
+                    "currency": 2,
+                    "isInland": 0,
+                    "isManual": 0,
+                    "reservePrice": "13.01",
+                    "subCurrency": "$",
+                    "sourceName": "亚马逊",
+                    "sourceLogo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                    "salesVolume": 23
+                }
+            ]
+        }
       }
 
 ### 子产品赞踩(客户端) [GET] /subProducts/thumbs/{id}?thumbsUp=1
