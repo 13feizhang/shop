@@ -17,6 +17,8 @@
     + 子产品修改接口
     + 子产品删除接口
     + 查询后台子产品的相关信息接口
++ 2019年3月11日
+    + 用户收藏列表接口     
 
 ## 经销商管理
 ### 增加 [POST] /dealer
@@ -1126,3 +1128,89 @@ Response (application/json)
         }
 
 + Request 400  （查询为空）
+
+### 查询用户收藏列表(客户端) [GET] /collects?filter[creator]=id
++ Parameters
+     +  id 用户id
++ Description 
+    + subProductId 子产品ID
+    + isShow 是否展示 0：不展示 1：展示
+    + pictures 子产品图片
+    + subProductTitle 产品标题
+    + forumName 类别
++ Response 200 (Application/json)
+
+      {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 3,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 3,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "/collects?filter[creator]=1037&page[number]=1&page[size]=10",
+            "first": "/collects?filter[creator]=1037&page[number]=1&page[size]=10",
+            "last": "/collects?filter[creator]=1037&page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 2,
+                "creator": 1037,
+                "created": "2019-02-28 17:27:43",
+                "subProductId": 2,
+                "isShow": 1,
+                "pictures": [
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg"
+                    },
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990604.jpg"
+                    },
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990602.jpg"
+                    },
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990603.jpg"
+                    }
+                ],
+                "subProductTitle": "小米8 8GB+128GB 红色",
+                "forumName": "商城"
+            },
+            {
+                "id": 7,
+                "creator": 1037,
+                "created": "2019-03-07 17:49:20",
+                "subProductId": 1,
+                "isShow": 1,
+                "pictures": [
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990601.jpg"
+                    },
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990604.jpg"
+                    },
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990602.jpg"
+                    },
+                    {
+                        "pictureurl": "//static.mifanxing.com/wx/image/29/15/990603.jpg"
+                    }
+                ],
+                "subProductTitle": "小米8 6GB+64GB 红色",
+                "forumName": "商城"
+            },
+            {
+                "id": 68,
+                "creator": 1037,
+                "created": "2019-03-11 17:45:44",
+                "subProductId": 4,
+                "isShow": 1,
+                "subProductTitle": "小米8 8GB+128GB 蓝色",
+                "forumName": "商城"
+            }
+        ]
+      }
