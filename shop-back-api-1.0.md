@@ -18,7 +18,13 @@
     + 子产品删除接口
     + 查询后台子产品的相关信息接口
 + 2019年3月11日
-    + 用户收藏列表接口     
+    + 用户收藏列表接口 
++ 2019年3月12日   
+    + 分类新增接口
+    + 分类修改接口
+    + 分类删除接口
+    + 分类通过名字模糊查询接口
+    + 分类通过parentId查询其下的所有分类
 
 ## 经销商管理
 ### 增加 [POST] /dealer
@@ -1229,3 +1235,136 @@ Response400 (application/json)
             }
         ]
       }
+      
+
+
+
+## 分类管理
+### 增加 [POST] /category
+顶级分类parentId为0
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+    
++ Request (application/json) 
+
+      {
+        "data": {
+        "enabled": 1,
+        "parentId": 0,
+        "title": "录音2",
+        "leaf": 0
+        }
+        }
+
+Response200 (application/json)
+
+    {
+    "data": {
+        "id": 5,
+        "type": "category"
+    }
+    }
+Response400 (application/json)
+
+    {
+        "errors": [
+        {
+            "status": "400",
+            "title": "Bad Request",
+            "detail": "请不要在叶子节点再加入新的分类！"
+        }
+        ]
+    }
+Response400 (application/json)
+
+    {
+        "errors": [
+        {
+            "status": "400",
+            "title": "Bad Request",
+            "detail": "上级分类不存在，无法正常保存！"
+        }
+    ]
+    }
+
+
+### 修改 [PATCH] /category/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+
++ Request (application/json)
+    
+      {
+        "data": {
+    	"id":4,
+        "enabled": 1,
+        "parentId": 0,
+        "title": "录音444",
+        "leaf": 0
+        }
+        }
+
++ Response 200
+
+### 删除 [DELETE] /category/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Response 204 
+
+
+
+### 查询通过模糊查询分类 [GET] /category//leaf
+例如：http://192.168.2.138:8299/category/leaf?filter[categoryName]=无
+
+
++ Parameters
+    + filter[categoryName] (String)   分类名称  -必填
+    + filter[leaf]  不填写为分类都查，当为1的时候，为叶子节点，当为0的时候，查询的非叶子节点  -非必填
+    
++ Response200(application/json)
+
+        {
+        "data": [
+        {
+            "id": 2,
+            "title": "无线麦克风",
+            "leaf": 0
+        },
+        {
+            "id": 3,
+            "title": "BLUE无线麦克风",
+            "leaf": 1
+        }
+        ]
+        }
+
+
+### 通过parentId得到分类
+例如：http://192.168.2.138:8299/category/byparentid
+
++ Parameters
+    + filter[parentId] (int)   parentId  -非必填 默认是0
+
+    
++ Response200(application/json)
+
+        {
+        "data": [
+        {
+            "id": 2,
+            "title": "无线麦克风",
+            "leaf": 0
+        },
+        {
+            "id": 6,
+            "title": "k&m",
+            "leaf": 0
+        }
+        ]
+        }
+
