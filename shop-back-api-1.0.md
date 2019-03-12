@@ -170,20 +170,34 @@ Response (application/json)
     
 + Request (application/json) 
 
-     {
-    	"data":{
-    		"colourName":"粉红色"
-    	}
-      }
-
-Response (application/json)
-
-    {
+        {
         "data": {
-            "id": 1,
+    	"colourName":"桃红色",
+    	"colourPicture":"https://static.mifanxing.com/article/image/88/87/5724231.jpg?w=320&h=180"
+        }
+        }
+
+Response201 (application/json)
+
+        {
+        "data": {
+            "id": 13,
             "type": "colour"
         }
-    }
+        }
+    
+Response400 (application/json)
+
+        {
+         "errors": [
+            {
+            "status": "400",
+            "title": "Bad Request",
+            "detail": "此颜色已存在！！"
+            }
+        ]
+        }
+
 
 ### 修改 [PATCH] /colour/{id}
 
@@ -194,9 +208,10 @@ Response (application/json)
 + Request (application/json)
     
       {
-        	"data":{
-        		"colourName":"粉红色1"
-        	}
+        "data": {
+    	"colourName":"桃红色1",
+    	"colourPicture":"https://static.mifanxing.com/article/image/88/87/5724231.jpg?w=320&h=180"
+        }
         }
 
 + Response 200
