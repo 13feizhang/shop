@@ -762,7 +762,7 @@
     
 ### 子产品收藏(客户端) [POST] /collects
 + Parameters
-     +  mainProductId 主产品id
+     +  subProductId 主产品id
 + Description 
     +  [MUST] Authenticated
     + [MUST] ROLE_ADMIN
@@ -770,7 +770,7 @@
 
       {
     	 "data":{
-    		"mainProductId":1
+    		"subProductId":1
     	  }
       }
 
