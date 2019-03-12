@@ -782,6 +782,10 @@
             "type": "collects"
         }
       }
+### 删除用户收藏 [DELETE] /collects/{id}
++ Description 
+    +  [MUST] Authenticated
+Response 204
       
 ### 查询子产品经销商详情(客户端) [GET] /dealer/mainProduct?productId={id}
 + Parameters
