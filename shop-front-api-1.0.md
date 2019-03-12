@@ -782,7 +782,9 @@
             "type": "collects"
         }
       }
-### 删除用户收藏 [DELETE] /collects/{id}
+### 删除用户收藏 [DELETE] /collects/userCollect/{id}
++ Parameters
+     +  id 子产品id
 + Description 
     +  [MUST] Authenticated
 Response 204
