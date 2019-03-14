@@ -1168,6 +1168,7 @@ Response400 (application/json)
     + keyWords     String  淘宝关键词
     + specification  String 规格
     + colour      Long 颜色
+    + colourClass Colour 颜色类
     + thumbsUp    Integer  点赞
     + thumbsDown  Integer 踩
     + isShow      Integer 是否展示（1为展示 0为不展示）
@@ -1188,10 +1189,14 @@ Response400 (application/json)
             "subFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \t\"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
             "keyWords": "小米8",
             "specification": "6GB+64GB",
-            "colour": 1,
             "thumbsUp": 5,
             "thumbsDown": 0,
             "isShow": 1,
+            "colourClass": {
+                "id": 1,
+                "colourName": "红色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1204,10 +1209,14 @@ Response400 (application/json)
             "mainProductId": 1,
             "keyWords": "blue,yeti",
             "specification": "8GB+128GB",
-            "colour": 1,
             "thumbsUp": 4,
             "thumbsDown": 1,
             "isShow": 1,
+            "colourClass": {
+                "id": 1,
+                "colourName": "红色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1220,10 +1229,14 @@ Response400 (application/json)
             "mainProductId": 1,
             "keyWords": "Shure,舒尔,SM58S",
             "specification": "6GB+64GB",
-            "colour": 2,
             "thumbsUp": 3,
             "thumbsDown": 1,
             "isShow": 1,
+            "colourClass": {
+                "id": 2,
+                "colourName": "黑色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1236,10 +1249,14 @@ Response400 (application/json)
             "mainProductId": 1,
             "keyWords": "Shure,舒尔,SM58S",
             "specification": "8GB+128GB",
-            "colour": 3,
             "thumbsUp": 3,
             "thumbsDown": 1,
             "isShow": 1,
+            "colourClass": {
+                "id": 3,
+                "colourName": "蓝色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1252,10 +1269,14 @@ Response400 (application/json)
             "mainProductId": 1,
             "keyWords": "JBL,GO2",
             "specification": "8GB+222GB",
-            "colour": 3,
             "thumbsUp": 2,
             "thumbsDown": 1,
             "isShow": 1,
+            "colourClass": {
+                "id": 3,
+                "colourName": "蓝色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1269,10 +1290,14 @@ Response400 (application/json)
             "subFeature": "{\"品质\":\"另类\"}",
             "keyWords": "小米91",
             "specification": "x86",
-            "colour": 1,
             "thumbsUp": 3,
             "thumbsDown": 0,
             "isShow": 1,
+            "colourClass": {
+                "id": 1,
+                "colourName": "红色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1286,10 +1311,14 @@ Response400 (application/json)
             "subFeature": "{\"品质\":\"另类\"}",
             "keyWords": "小米91",
             "specification": "x86",
-            "colour": 1,
             "thumbsUp": 1,
             "thumbsDown": 1,
             "isShow": 1,
+            "colourClass": {
+                "id": 1,
+                "colourName": "红色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1303,10 +1332,14 @@ Response400 (application/json)
             "subFeature": "{\"品质\":\"另类\"}",
             "keyWords": "小米91",
             "specification": "x86",
-            "colour": 1,
             "thumbsUp": 2,
             "thumbsDown": 0,
             "isShow": 1,
+            "colourClass": {
+                "id": 1,
+                "colourName": "红色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1320,10 +1353,14 @@ Response400 (application/json)
             "subFeature": "{\"拆字\"\":\"松木\"}",
             "keyWords": "小米,插板",
             "specification": "经典",
-            "colour": 1,
             "thumbsUp": 2,
             "thumbsDown": 1,
             "isShow": 1,
+            "colourClass": {
+                "id": 1,
+                "colourName": "红色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         },
         {
@@ -1337,10 +1374,14 @@ Response400 (application/json)
             "subFeature": "{\"拆字\"\":\"黄松木\"}",
             "keyWords": "小米1,插板1",
             "specification": "经典",
-            "colour": 1,
             "thumbsUp": 1,
             "thumbsDown": 0,
             "isShow": 1,
+            "colourClass": {
+                "id": 1,
+                "colourName": "红色",
+                "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
+            },
             "coupon": false
         }
         ]
