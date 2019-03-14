@@ -25,6 +25,8 @@
     + 分类删除接口
     + 分类通过名字模糊查询接口
     + 分类通过parentId查询其下的所有分类
++ 2019年3月14日 
+    + 后台子产品通过产品ID得到子产品列表
 
 ## 经销商管理
 ### 增加 [POST] /dealer
@@ -1149,6 +1151,200 @@ Response400 (application/json)
         }
 
 + Request 400  （查询为空）
+
+
+### 后台子产品通过产品ID得到子产品列表 [GET] subProducts/admin/productid/{productId}
++ Parameters
+     +  productId 主产品ID
++ Description 
+    + id  Long  子产品ID
+    + enabled 禁用为0 启用为1
+    + creator  Long 创建人
+    + modifier Long 修改人
+    + created  Date 创建时间
+    + modified Date 修改时间
+    + mainProductId  Long 主产品id
+    + subFeature  String 子特征
+    + keyWords     String  淘宝关键词
+    + specification  String 规格
+    + colour      Long 颜色
+    + thumbsUp    Integer  点赞
+    + thumbsDown  Integer 踩
+    + isShow      Integer 是否展示（1为展示 0为不展示）
+    + coupon      Boolean  是否有优惠券
+    
++ Response 200 (Application/json)
+    
+        {
+        "data": [
+        {
+            "id": 1,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 18:48:38",
+            "modified": "2019-03-08 18:48:38",
+            "mainProductId": 1,
+            "subFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \t\"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
+            "keyWords": "小米8",
+            "specification": "6GB+64GB",
+            "colour": 1,
+            "thumbsUp": 5,
+            "thumbsDown": 0,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 2,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 18:56:20",
+            "modified": "2019-03-08 18:56:20",
+            "mainProductId": 1,
+            "keyWords": "blue,yeti",
+            "specification": "8GB+128GB",
+            "colour": 1,
+            "thumbsUp": 4,
+            "thumbsDown": 1,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 3,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 18:56:48",
+            "modified": "2019-03-08 18:56:48",
+            "mainProductId": 1,
+            "keyWords": "Shure,舒尔,SM58S",
+            "specification": "6GB+64GB",
+            "colour": 2,
+            "thumbsUp": 3,
+            "thumbsDown": 1,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 4,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 18:56:17",
+            "modified": "2019-03-08 18:56:17",
+            "mainProductId": 1,
+            "keyWords": "Shure,舒尔,SM58S",
+            "specification": "8GB+128GB",
+            "colour": 3,
+            "thumbsUp": 3,
+            "thumbsDown": 1,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 5,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 17:20:42",
+            "modified": "2019-03-08 17:20:42",
+            "mainProductId": 1,
+            "keyWords": "JBL,GO2",
+            "specification": "8GB+222GB",
+            "colour": 3,
+            "thumbsUp": 2,
+            "thumbsDown": 1,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 12,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-11 16:53:46",
+            "modified": "2019-03-11 16:53:46",
+            "mainProductId": 1,
+            "subFeature": "{\"品质\":\"另类\"}",
+            "keyWords": "小米91",
+            "specification": "x86",
+            "colour": 1,
+            "thumbsUp": 3,
+            "thumbsDown": 0,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 13,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 15:01:54",
+            "modified": "2019-03-08 15:01:54",
+            "mainProductId": 1,
+            "subFeature": "{\"品质\":\"另类\"}",
+            "keyWords": "小米91",
+            "specification": "x86",
+            "colour": 1,
+            "thumbsUp": 1,
+            "thumbsDown": 1,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 15,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 15:02:49",
+            "modified": "2019-03-08 15:02:49",
+            "mainProductId": 1,
+            "subFeature": "{\"品质\":\"另类\"}",
+            "keyWords": "小米91",
+            "specification": "x86",
+            "colour": 1,
+            "thumbsUp": 2,
+            "thumbsDown": 0,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 16,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 18:55:25",
+            "modified": "2019-03-08 18:55:25",
+            "mainProductId": 1,
+            "subFeature": "{\"拆字\"\":\"松木\"}",
+            "keyWords": "小米,插板",
+            "specification": "经典",
+            "colour": 1,
+            "thumbsUp": 2,
+            "thumbsDown": 1,
+            "isShow": 1,
+            "coupon": false
+        },
+        {
+            "id": 17,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-03-08 15:03:05",
+            "modified": "2019-03-08 15:03:05",
+            "mainProductId": 1,
+            "subFeature": "{\"拆字\"\":\"黄松木\"}",
+            "keyWords": "小米1,插板1",
+            "specification": "经典",
+            "colour": 1,
+            "thumbsUp": 1,
+            "thumbsDown": 0,
+            "isShow": 1,
+            "coupon": false
+        }
+        ]
+        }
 
 ### 查询用户收藏列表(客户端) [GET] /collects?filter[creator]=id
 + Parameters
