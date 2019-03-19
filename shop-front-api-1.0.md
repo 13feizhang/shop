@@ -601,6 +601,18 @@
         "coupon": false
         }
         }
+        
+ Response 400 (Application/json)   
+ 
+        {
+        "errors": [
+        {
+            "status": "400",
+            "title": "Bad Request",
+            "detail": "查询子产品不存在！"
+        }
+        ]
+        }
 
 ### 查询子产品价格详情(客户端) [GET] /price/subProduct/{id}
 + Parameters
