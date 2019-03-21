@@ -863,7 +863,9 @@ Response400 (application/json)
                 "thumbsDown": 100,
                 "isShow": 1
             }
-        ]
+        ],
+        "brandTitle": "小米",
+        "categoryTitle": "BLUE无线麦克风"
         }
         }
 + Request 400  （查询为空）
