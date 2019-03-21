@@ -501,30 +501,43 @@ Response400 (application/json)
 + Request  (application/json)
 
         {
-	    "data": {
-		"categoryId": 3,
-		"title": "小米插座1",
-		"briefDescription": "小米插座1",
-		"description": "小米插座1",
-		"brandId": "1",
-		"mainFeature":"{\"颜色\":\"红色\"}",
-		"accessories":[
-			{ "type": 0,
-              "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
-              "title": "小米插座视频",
-              "description": "小米插座视频",
-              "filesize": 0,
-              "duration": 0},
-              {
-              "type": 1,
-              "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
-              "title": "音频22",
-              "description": "音频22",
-              "filesize": 0,
-              "duration": 0
-              }
-			]
-	    }
+          "data": {
+          "categoryId": 3,
+          "title": "小米WIFI",
+          "briefDescription": "小米WIFI",
+          "description": "小米WIFI0",
+          "brandId": "1",
+          "mainFeature":"{\"颜色\":\"红色\"}",
+          "accessories":[
+          	{ "type": 0,
+                "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
+                "title": "小米WIFI视频",
+                "description": "小米WIFI视频",
+                "filesize": 0,
+                "duration": 0},
+                {
+                "type": 1,
+                "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
+                "title": "音频8888",
+                "description": "音频8888",
+                "filesize": 0,
+                "duration": 0
+                }
+          	],
+          "dealers":[
+          	{"dealerName":"汇丰音响",
+          	 "dealerTel":"18331931900",
+          	 "dealerEmail":"1253619800@qq.com",
+          	 "dealerAddress":"广州市",
+          	 "dealerMainBrand":"mifanxing"
+          	},{"dealerName":"诚信建业",
+          	 "dealerTel":"18331931900",
+          	 "dealerEmail":"1253619800@qq.com",
+          	 "dealerAddress":"湖北省",
+          	 "dealerMainBrand":"mifanxing"
+          	}
+          	]	
+          }
         }
 + Response 200 
 
@@ -558,44 +571,43 @@ Response400 (application/json)
 + Request (application/json)
  
         {
-        "data": {
-        "id": 19,
-        "categoryId": 3,
-        "title": "小米插座19",
-        "briefDescription": "小米插座19",
-        "description": "小米插座19",
-        "brandId": "1",
-        "mainFeature": "{\"颜色\":\"绿色\"}",
-        "access": "{\"颜色\":\"红色\"}",
-        "accessories": [
-            {
-                "id": 22,
-                "type": 0,
+          "data": {
+          "categoryId": 3,
+          "title": "1小米WIFI",
+          "briefDescription": "1小米WIFI",
+          "description": "小米WIFI0",
+          "brandId": "1",
+          "mainFeature":"{\"颜色\":\"红色\"}",
+          "accessories":[
+          	{ "type": 0,
                 "filename": "https://jdvodoss.jcloudcache.com/vodtransgzp1251412368/7447398156451886582/v.f30.mp4?dockingId=aee5a279-b858-4e06-a8e6-3accdc3f8014&storageSource=3",
-                "title": "小米插座视1频",
-                "description": "小米插座视频1",
+                "title": "小米WIFI视频",
+                "description": "小米WIFI视频",
                 "filesize": 0,
-                "duration": 0
-            },
-            {
-                "id": 25,
+                "duration": 0},
+                {
                 "type": 1,
                 "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
-                "title": "音频111123422",
-                "description": "音频212",
+                "title": "1音频8888",
+                "description": "音频8888",
                 "filesize": 0,
                 "duration": 0
-            },
-            {
-                "type": 1,
-                "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
-                "title": "音频211112",
-                "description": "音频2211",
-                "filesize": 0,
-                "duration": 0
-            }
-        ]
-        }
+                }
+          	],
+          "dealers":[
+          	{"dealerName":"汇丰音响1",
+          	 "dealerTel":"18331931900",
+          	 "dealerEmail":"1253619800@qq.com",
+          	 "dealerAddress":"广州市",
+          	 "dealerMainBrand":"mifanxing"
+          	},{"dealerName":"诚信建业1",
+          	 "dealerTel":"18331931900",
+          	 "dealerEmail":"1253619800@qq.com",
+          	 "dealerAddress":"湖北省",
+          	 "dealerMainBrand":"mifanxing"
+          	}
+          	]	
+          }
         }
 
 + Response 200 
