@@ -27,6 +27,8 @@
     + 分类通过parentId查询其下的所有分类
 + 2019年3月14日 
     + 后台子产品通过产品ID得到子产品列表
++ 2019年3月21日 
+    + 增加价格来源接口
 
 ## 经销商管理
 ### 增加 [POST] /dealer
@@ -1619,3 +1621,203 @@ Response400 (application/json)
         ]
         }
 
+## 价格来源管理
++ Data
+    + id (Long) - ID
+    + sourceName (String) - 来源名称
+    + source (Long) - 是否国内 1为国内 0为国外
+    + sourceUrl (String) - 来源url
+    + enabled (int) - 0禁用 1启用
+    + creator (Long) - 创建人
+    + modifier (Long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
+
+### 增加 [POST] /subProductPricesSource
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+    
++ Request (application/json) 
+
+      {
+          "data":{
+        	"sourceName":"国美",
+        	"source":"1",
+        	"sourceUrl":"https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/894ba013323b89b6391baa06da7629b7_222_222.jpg"
+          } 
+        }
+
+Response (application/json)
+
+    {
+      "data": {
+        "id": 17,
+        "type": "subProductPricesSource"
+     }
+    }
+
+### 修改 [PATCH] /subProductPricesSource/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+
++ Request (application/json)
+    
+      {
+       "data":{
+    	 "sourceName":"国美1",
+    	 "source":"1",
+    	 "sourceUrl":"https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/894ba013323b89b6391baa06da7629b7_222_222.jpg"
+       } 
+      }
+
++ Response 200
+
+### 列表[GET] /subProductPricesSource
++ Parameters
+  + id 
+  + title
+     + 查询示例：filter[sourceName]=%25来源%25 （'%25'为'%'的转义） 
+  + sort -modified(从新到旧) | modified(从旧到新)
++ Request (application/json)
+       
+      {
+        "meta": {
+            "totalPages": 2,
+            "totalElements": 11,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 10,
+            "first": true,
+            "last": false,
+            "sort": null
+        },
+        "links": {
+            "self": "/subProductPricesSource?page[number]=1&page[size]=10",
+            "first": "/subProductPricesSource?page[number]=1&page[size]=10",
+            "next": "/subProductPricesSource?page[number]=2&page[size]=10",
+            "last": "/subProductPricesSource?page[number]=2&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-20 11:08:46",
+                "modified": "2019-02-20 11:08:50",
+                "sourceName": "淘宝",
+                "source": 1,
+                "sourceUrl": "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=948e7f7076d98d1062d904634056d36b/5fdf8db1cb134954b37001e85c4e9258d0094ad4.jpg"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-24 21:28:01",
+                "modified": "2019-02-24 21:28:03",
+                "sourceName": "京东",
+                "source": 1,
+                "sourceUrl": "https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=57d5eca73f2ac65c73086e219a9bd974/7dd98d1001e939014c6dbdf971ec54e737d1968d.jpg"
+            },
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-24 21:28:06",
+                "modified": "2019-02-24 21:28:09",
+                "sourceName": "苏宁",
+                "source": 1,
+                "sourceUrl": "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=da3a0820943df8dcb23087c3ac7819ee/9f510fb30f2442a773c6fb72da43ad4bd0130218.jpg"
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-27 11:32:09",
+                "modified": "2019-02-27 11:32:09",
+                "sourceName": "网易考拉",
+                "source": 1,
+                "sourceUrl": "https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike272%2C5%2C5%2C272%2C90/sign=e00da6a4c6ef7609280691cd4fb4c8a9/cf1b9d16fdfaaf511f272386815494eef11f7ac7.jpg"
+            },
+            {
+                "id": 5,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-27 11:32:30",
+                "modified": "2019-02-27 11:33:00",
+                "sourceName": "微信",
+                "source": 1,
+                "sourceUrl": "https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=a2970c419a2397ddc274905638ebd9d2/d53f8794a4c27d1e15b40e6210d5ad6edcc43881.jpg"
+            },
+            {
+                "id": 6,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-27 11:43:09",
+                "modified": "2019-02-27 11:43:09",
+                "sourceName": "拼多多",
+                "source": 1,
+                "sourceUrl": "https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=75fba791376d55fbd1cb7e740c4b242f/14ce36d3d539b600699fc4f8e350352ac65cb728.jpg"
+            },
+            {
+                "id": 13,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-02-28 19:51:11",
+                "modified": "2019-02-28 19:51:14",
+                "sourceName": "亚马逊",
+                "source": 0,
+                "sourceUrl": "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=46afe7aa242eb938f86072a0b40bee50/d043ad4bd11373f0904a8bd4af0f4bfbfbed0407.jpg"
+            },
+            {
+                "id": 14,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-08 18:21:32",
+                "modified": "2019-03-08 18:21:35",
+                "sourceName": "洋码头",
+                "source": 0,
+                "sourceUrl": "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=fd9875b3b299a9012f3853647cfc611e/4ec2d5628535e5dd05b90c787cc6a7efcf1b6284.jpg"
+            },
+            {
+                "id": 15,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-08 18:24:01",
+                "modified": "2019-03-08 18:24:04",
+                "sourceName": "windelnde",
+                "source": 0,
+                "sourceUrl": "https://static.windeln.com.cn/content/1000.WPnB3DauMSatzNMj/windeln-cn-2x.png"
+            },
+            {
+                "id": 16,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-19 10:58:00",
+                "modified": "2019-03-19 10:58:03",
+                "sourceName": "k&m",
+                "source": 0,
+                "sourceUrl": "https://images.static-thomann.de/pics/herstlogos/k_und_m.gif"
+            }
+        ]
+      }
+       
+
+### 删除 [DELETE] /subProductPricesSource/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Response 204  
