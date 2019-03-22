@@ -1571,8 +1571,8 @@ Response400 (application/json)
 
 
 
-### 查询通过模糊查询分类 [GET] /category//leaf
-例如：http://192.168.2.138:8299/category/leaf?filter[categoryName]=无
+### 查询通过模糊查询分类 [GET] /category/leaf
+例如：http://192.168.1.138:8299/category/leaf?filter[categoryName]=无
 
 
 + Parameters
@@ -1601,7 +1601,7 @@ Response400 (application/json)
 例如：http://192.168.2.138:8299/category/byparentid
 
 + Parameters
-    + filter[parentId] (int)   parentId  -非必填 默认是0
+    + filter[parentId]   (int)   -非必填 默认是0
 
     
 + Response200(application/json)
