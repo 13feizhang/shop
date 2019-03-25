@@ -654,12 +654,13 @@ Response400 (application/json)
         }
 
 ### 查询主产品详情 [GET] /products/{id}
+主产品通过id查询详情接口
 + Parameters
     + id 
     
 + Request 200  (application/json)
        
-        {
+       {
         "data": {
         "id": 1,
         "enabled": 1,
@@ -672,6 +673,27 @@ Response400 (application/json)
         "briefDescription": "【品质特惠】骁龙845处理器，成交价2399！红外人脸解锁，AI变焦双摄，AI语音助手！推荐购买白色",
         "description": "小米公司最新款手机",
         "brandId": 1,
+        "mainFeature": "{\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } }",
+        "categoryses": [
+            {
+                "id": 1,
+                "parentId": 0,
+                "title": "麦克风",
+                "leaf": 0
+            },
+            {
+                "id": 2,
+                "parentId": 1,
+                "title": "无线麦克风",
+                "leaf": 0
+            },
+            {
+                "id": 3,
+                "parentId": 2,
+                "title": "BLUE无线麦克风",
+                "leaf": 1
+            }
+        ],
         "accessories": [
             {
                 "id": 1,
@@ -702,32 +724,6 @@ Response400 (application/json)
                 "duration": 0
             },
             {
-                "id": 3,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "type": 1,
-                "filename": "https://static.mifanxing.com/yyren/image/week/20171110/1/Snare-1_1inchabove.mp3",
-                "title": "音频",
-                "description": "音频",
-                "filesize": 0,
-                "duration": 11
-            },
-            {
-                "id": 4,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2019-02-28 16:44:03",
-                "modified": "2019-02-28 16:44:06",
-                "type": 3,
-                "title": "相关视频",
-                "content": "m0508lpjej4",
-                "description": "相关视频",
-                "filesize": 0,
-                "duration": 0
-            },
-            {
                 "id": 5,
                 "enabled": 1,
                 "creator": 0,
@@ -735,7 +731,7 @@ Response400 (application/json)
                 "created": "2019-03-01 14:43:27",
                 "modified": "2019-03-01 14:43:27",
                 "type": 3,
-                "filename": "",
+                "filename": "https://static.mifanxing.com/article/image/254/86/5701313.jpg",
                 "title": "相关视频1",
                 "content": "m0508lpjej4",
                 "description": "相关视频1",
@@ -749,127 +745,173 @@ Response400 (application/json)
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-03-04 10:15:22",
-                "modified": "2019-03-04 10:15:22",
+                "created": "2019-03-15 10:05:43",
+                "modified": "2019-03-15 10:05:43",
                 "mainProductId": 1,
+                "subFeature": "[\"影像传感器\": { \"传感器类型\": \"Exmor Rs\", \"有效哦像素\": \"2420\" }, \"对焦系统\": {\"对焦点\": \"683各个想问点\"}, \t\"液晶屏\": { \"尺寸\": \"3.tt\", \"总箱数\": \"111\" } ]",
                 "keyWords": "小米8",
                 "specification": "6GB+64GB",
                 "colour": 1,
-                "thumbsUp": 17,
-                "thumbsDown": 9,
-                "isShow": 1
+                "thumbsUp": 6,
+                "thumbsDown": 0,
+                "isShow": 1,
+                "coupon": false
             },
             {
                 "id": 2,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-02-26 11:27:02",
-                "modified": "2019-02-26 11:27:02",
+                "created": "2019-03-08 18:56:20",
+                "modified": "2019-03-08 18:56:20",
                 "mainProductId": 1,
-                "keyWords": "小米8",
+                "keyWords": "blue,yeti",
                 "specification": "8GB+128GB",
                 "colour": 1,
-                "thumbsUp": 8,
-                "thumbsDown": 2,
-                "isShow": 1
+                "thumbsUp": 4,
+                "thumbsDown": 1,
+                "isShow": 1,
+                "coupon": false
             },
             {
                 "id": 3,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-02-20 11:05:22",
-                "modified": "2019-02-20 11:05:25",
+                "created": "2019-03-08 18:56:48",
+                "modified": "2019-03-08 18:56:48",
                 "mainProductId": 1,
-                "keyWords": "小米8",
+                "keyWords": "Shure,舒尔,SM58S",
                 "specification": "6GB+64GB",
                 "colour": 2,
-                "thumbsUp": 1,
+                "thumbsUp": 3,
                 "thumbsDown": 1,
-                "isShow": 1
+                "isShow": 1,
+                "coupon": false
             },
             {
                 "id": 4,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-02-20 11:05:18",
-                "modified": "2019-02-20 11:05:14",
+                "created": "2019-03-08 18:56:17",
+                "modified": "2019-03-08 18:56:17",
                 "mainProductId": 1,
-                "keyWords": "小米8",
+                "keyWords": "Shure,舒尔,SM58S",
                 "specification": "8GB+128GB",
                 "colour": 3,
-                "thumbsUp": 1,
+                "thumbsUp": 3,
                 "thumbsDown": 1,
-                "isShow": 1
+                "isShow": 1,
+                "coupon": false
             },
             {
                 "id": 5,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
+                "created": "2019-03-08 17:20:42",
+                "modified": "2019-03-08 17:20:42",
                 "mainProductId": 1,
-                "keyWords": "小米8",
+                "keyWords": "JBL,GO2",
                 "specification": "8GB+222GB",
                 "colour": 3,
-                "thumbsUp": 1,
+                "thumbsUp": 2,
                 "thumbsDown": 1,
-                "isShow": 1
+                "isShow": 1,
+                "coupon": false
             },
             {
                 "id": 12,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-02-27 15:51:07",
-                "modified": "2019-02-27 15:51:07",
+                "created": "2019-03-11 16:53:46",
+                "modified": "2019-03-11 16:53:46",
                 "mainProductId": 1,
                 "subFeature": "{\"品质\":\"另类\"}",
                 "keyWords": "小米91",
                 "specification": "x86",
                 "colour": 1,
-                "thumbsUp": 0,
-                "thumbsDown": 100,
-                "isShow": 1
+                "thumbsUp": 3,
+                "thumbsDown": 0,
+                "isShow": 1,
+                "coupon": false
             },
             {
                 "id": 13,
-                "enabled": 1,
+                "enabled": 0,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-02-27 15:53:52",
-                "modified": "2019-02-27 15:53:52",
+                "created": "2019-03-08 15:01:54",
+                "modified": "2019-03-19 16:29:25",
                 "mainProductId": 1,
                 "subFeature": "{\"品质\":\"另类\"}",
                 "keyWords": "小米91",
                 "specification": "x86",
                 "colour": 1,
-                "thumbsUp": 0,
-                "thumbsDown": 100,
-                "isShow": 1
+                "thumbsUp": 1,
+                "thumbsDown": 1,
+                "isShow": 1,
+                "coupon": false
             },
             {
                 "id": 15,
-                "enabled": 1,
+                "enabled": 0,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-02-27 15:56:48",
-                "modified": "2019-02-27 15:56:48",
+                "created": "2019-03-08 15:02:49",
+                "modified": "2019-03-19 10:35:31",
                 "mainProductId": 1,
                 "subFeature": "{\"品质\":\"另类\"}",
                 "keyWords": "小米91",
                 "specification": "x86",
                 "colour": 1,
+                "thumbsUp": 2,
+                "thumbsDown": 0,
+                "isShow": 1,
+                "coupon": false
+            },
+            {
+                "id": 44,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-20 18:06:31",
+                "modified": "2019-03-20 19:27:10",
+                "mainProductId": 1,
+                "subFeature": "{\"拆字\"\":\"松木\"}",
+                "keyWords": "小米,插板",
+                "specification": "经典",
+                "colour": 1,
                 "thumbsUp": 0,
-                "thumbsDown": 100,
-                "isShow": 1
+                "thumbsDown": 0,
+                "isShow": 1,
+                "coupon": false
+            },
+            {
+                "id": 46,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-20 19:29:16",
+                "modified": "2019-03-20 19:29:16",
+                "mainProductId": 1,
+                "subFeature": "{\"拆字\"\":\"松木\"}",
+                "keyWords": "小米,插板",
+                "specification": "经典",
+                "colour": 1,
+                "thumbsUp": 0,
+                "thumbsDown": 0,
+                "isShow": 1,
+                "coupon": false
             }
         ],
         "brandTitle": "小米",
         "categoryTitle": "BLUE无线麦克风"
         }
-        }
+        } 
+        
 + Request 400  （查询为空）
 
 
