@@ -1548,7 +1548,8 @@ Response400 (application/json)
         "enabled": 1,
         "parentId": 0,
         "title": "录音2",
-        "leaf": 0
+        "leaf": 0,
+        "origin":"http://static.mifanxing.com/yyren/image/241/14/979421.jpg?w=400"
         }
         }
 
@@ -1598,7 +1599,8 @@ Response400 (application/json)
         "enabled": 1,
         "parentId": 0,
         "title": "录音444",
-        "leaf": 0
+        "leaf": 0,
+        "origin":"http://static.mifanxing.com/yyren/image/241/14/979421.jpg?w=400"
         }
         }
 
