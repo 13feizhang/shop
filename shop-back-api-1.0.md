@@ -932,6 +932,8 @@ Response400 (application/json)
         + colour (Long) - 颜色ID
         + thumbsUp (Integer) - 赞
         + thumbsDown (Integer) - 踩
+        + shopUrl （String） -购买链接
+        + couponUrl （String）-优惠券链接
         + isShow (Integer) - 是否展示
         + enabled (int) - 使能 0禁止 1启用
         + creator (long) - 创建人
@@ -948,11 +950,22 @@ Response400 (application/json)
         + md5 (String) - md5值
         + groupId (Integer) - 1为正常图；36为360图
         + orderNo (Integer) - 360图展示顺序
-        + enabled (int) - 使能 0禁止 1启用
+        + enabled (Integer) - 使能 0禁止 1启用
         + creator (long) - 创建人
         + modifier (long) - 修改人
         + created (date) - 创建时间
         + modified (date) - 修改时间 
+    + prices 价格表
+        + subProductId  (long)  - 子产品的id
+        + tbProductId   (long)  - 淘宝表的产品id
+        + tbItemId   (long)   - 实际淘宝产品的id
+        + source   (Integer)   - 来自淘宝，京东，亚马逊
+        + currency  (Integer)  - 币别的id
+        + isInland  (Integer)  - 是否国内   1为国内  0为国外
+        + isManual  (Integer)  - 是否人工   1 为人工  0为机器
+        + manualCouponClickUrl  (String)  -人工输入的优惠券链接（目前保留字段）
+        + manualPurchaseLink  (String) -人工输入的购买链接（目前保留字段）
+        + manualPrice  (Float)  - 人工输入的价格
 
 ### 增加 [POST] /subProducts
 + Data
@@ -982,6 +995,17 @@ Response400 (application/json)
         + md5 (String) - md5值
         + groupId (Integer) - 1为正常图；36为360图
         + orderNo (Integer) - 360图展示顺序
+    + prices 价格表
+        + subProductId  (long)  - 子产品的id
+        + tbProductId   (long)  - 淘宝表的产品id
+        + tbItemId   (long)   - 实际淘宝产品的id
+        + source   (Integer)   - 来自淘宝，京东，亚马逊
+        + currency  (Integer)  - 币别的id
+        + isInland  (Integer)  - 是否国内   1为国内  0为国外
+        + isManual  (Integer)  - 是否人工   1 为人工  0为机器
+        + manualCouponClickUrl  (String)  -人工输入的优惠券链接（目前保留字段）
+        + manualPurchaseLink  (String) -人工输入的购买链接（目前保留字段）
+        + manualPrice  (Float)  - 人工输入的价格
         
 + Request  (application/json)
 
@@ -994,6 +1018,29 @@ Response400 (application/json)
         "colour": 1,
         "isShow": 1,
         "shopUrl": "购买链接",
+        "couponUrl": "http://优惠券链接",
+        "manualInfo": [        //来源价格的保存
+            {
+                "tbProductId": 1111,
+                "tbItemId": 0,
+                "source": 1,
+                "currency": 1,
+                "isInland": 1,
+                "manualPrice": 13.5,
+                "manualCouponClickUrl": "http://ceshi1",
+                "manualPurchaseLink": "http://ceshi1"
+            },
+            {
+                "tbProductId": 1211,
+                "tbItemId": 0,
+                "source": 1,
+                "currency": 2,
+                "isInland": 1,
+                "manualPrice": 14.5,
+                "manualCouponClickUrl": "http://ceshi1",
+                "manualPurchaseLink": "http://ceshi1"
+            }
+        ],
         "pictures": [
             {
                 "pictureurl": "//1static.mifanxing.com/wx/image/29/15/990601.jpg",
@@ -1019,7 +1066,7 @@ Response400 (application/json)
                 "groupId": 36,
                 "orderNo": 0
             }
-        ]
+            ]
         }
         }
 + Response 200 
@@ -1063,41 +1110,69 @@ Response400 (application/json)
  
         {
         "data": {
-        "id": 17,
         "mainProductId": 1,
-        "subFeature": "{\"拆字\"\":\"黄松木\"}",
-        "keyWords": "小米1,插板1",
+        "subFeature": "{\"拆字\"\":\"松木\"}",
+        "keyWords": "小米,插板",
         "specification": "经典",
         "colour": 1,
         "isShow": 1,
-        "thumbsUp":10,
-        "thumbsDown":20,
         "shopUrl": "购买链接",
+        "couponUrl": "http://优惠券链接",
+        "manualInfo": [
+            {
+                "id": 35,
+                "tbProductId": 1111,
+                "tbItemId": 0,
+                "source": 1,
+                "currency": 2,
+                "isInland": 1,
+                "manualPrice": 122.5,
+                "manualCouponClickUrl": "http://ceshi1",
+                "manualPurchaseLink": "http://ceshi1"
+            },
+            {
+                "tbProductId": 1111,
+                "tbItemId": 0,
+                "source": 1,
+                "currency": 1,
+                "isInland": 1,
+                "manualPrice": 13.5,
+                "manualCouponClickUrl": "http://ceshi1",
+                "manualPurchaseLink": "http://ceshi1"
+            },
+            {
+                "id": 36,
+                "tbProductId": 1222221,
+                "tbItemId": 0,
+                "source": 1,
+                "currency": 2,
+                "isInland": 1,
+                "manualPrice": 222.5,
+                "manualCouponClickUrl": "http://ceshi1",
+                "manualPurchaseLink": "http://ceshi1"
+            }
+        ],
         "pictures": [
             {
-                "id": 11,
                 "pictureurl": "//1static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
                 "groupId": 1,
                 "orderNo": 0
             },
             {
-                "id": 12,
-                "pictureurl": "//static.mifanxing.com/article/image/253/86/5700886.jpg",
+                "pictureurl": "//2static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
                 "groupId": 1,
-                "orderNo": 1
+                "orderNo": 0
             },
             {
-                "id": 13,
-                "pictureurl": "//static.mifanxing.com/article/image/253/86/570088116.jpg",
+                "pictureurl": "//3static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
                 "groupId": 36,
                 "orderNo": 0
             },
             {
-                "id": 14,
-                "pictureurl": "//static.mifanxing.com/article/image/253/86/570081186.jpg",
+                "pictureurl": "//4static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
                 "groupId": 36,
                 "orderNo": 0
@@ -1118,25 +1193,27 @@ Response400 (application/json)
 ### 查询后台子产品的相关信息 [GET] /subProducts/admin/{id}
 查询出子产品的信息
 + Parameters
-    + id  子产品的信息
+    + id  子产品的id
     
 + Request (application/json)
        
         {
         "data": {
-        "id": 17,
+        "id": 49,
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
-        "created": "2019-03-04 14:03:46",
-        "modified": "2019-03-04 14:28:11",
+        "created": "2019-03-27 09:54:36",
+        "modified": "2019-03-27 10:39:19",
         "mainProductId": 1,
-        "subFeature": "{\"拆字\"\":\"黄松木\"}",
-        "keyWords": "小米1,插板1",
+        "subFeature": "{\"拆字\"\":\"松木\"}",
+        "keyWords": "小米,插板",
         "specification": "经典",
         "colour": 1,
         "thumbsUp": 0,
         "thumbsDown": 0,
+        "couponUrl": "http://优惠券链接",
+        "shopUrl": "购买链接",
         "isShow": 1,
         "pictures": [
             {
@@ -1144,8 +1221,8 @@ Response400 (application/json)
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-03-04 14:16:25",
-                "modified": "2019-03-04 14:16:25",
+                "created": "2019-03-27 10:39:09",
+                "modified": "2019-03-27 10:39:09",
                 "pictureurl": "//1static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
                 "md5": "0",
@@ -1153,42 +1230,42 @@ Response400 (application/json)
                 "orderNo": 0
             },
             {
-                "id": 12,
+                "id": 76,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-03-04 14:16:27",
-                "modified": "2019-03-04 14:16:27",
-                "pictureurl": "//static.mifanxing.com/article/image/253/86/5700886.jpg",
+                "created": "2019-03-27 10:39:10",
+                "modified": "2019-03-27 10:39:10",
+                "pictureurl": "//2static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
-                "md5": "147524386900817203547092139257261658029",
+                "md5": "0",
                 "groupId": 1,
-                "orderNo": 1
+                "orderNo": 0
             }
         ],
         "imageRotation": true,
         "rotations": [
             {
-                "id": 13,
+                "id": 77,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-03-04 14:16:29",
-                "modified": "2019-03-04 14:16:29",
-                "pictureurl": "//static.mifanxing.com/article/image/253/86/570088116.jpg",
+                "created": "2019-03-27 10:39:10",
+                "modified": "2019-03-27 10:39:10",
+                "pictureurl": "//3static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
                 "md5": "0",
                 "groupId": 36,
                 "orderNo": 0
             },
             {
-                "id": 14,
+                "id": 78,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-03-04 14:16:29",
-                "modified": "2019-03-04 14:16:29",
-                "pictureurl": "//static.mifanxing.com/article/image/253/86/570081186.jpg",
+                "created": "2019-03-27 10:39:11",
+                "modified": "2019-03-27 10:39:11",
+                "pictureurl": "//4static.mifanxing.com/wx/image/29/15/990601.jpg",
                 "title": "TestPicTURE2",
                 "md5": "0",
                 "groupId": 36,
@@ -1203,8 +1280,29 @@ Response400 (application/json)
             "created": "2019-02-20 11:08:46",
             "modified": "2019-02-20 11:08:50",
             "colourName": "红色",
-            "colourPicture": "http://img.alicdn.com/imgextra/i4/804206007/TB2vBDgxxlmpuFjSZPfXXc9iXXa_!!804206007.jpg_40x40q90.jpg"
-        }
+            "colourPicture": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552893543223&di=625a3ffdc859589fd6526c0b7a0dc4a7&imgtype=0&src=http%3A%2F%2Fimg010.hc360.cn%2Fm6%2FM01%2FFC%2FBE%2FwKhQoVbs__CEfumYAAAAABd0L1M127.jpg"
+        },
+        "manualInfo": [
+            {
+                "id": 37,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-03-27 10:39:19",
+                "modified": "2019-03-27 10:39:19",
+                "subProductId": 49,
+                "tbProductId": 1111,
+                "tbItemId": 0,
+                "source": 1,
+                "currency": 1,
+                "isInland": 1,
+                "isManual": 1,
+                "manualCouponClickUrl": "http://ceshi1",
+                "manualPurchaseLink": "http://ceshi1",
+                "manualPrice": 13.5
+            }
+        ],
+        "coupon": false
         }
         }
 
